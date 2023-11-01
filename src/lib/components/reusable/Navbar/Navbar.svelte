@@ -3,8 +3,14 @@
 	import Button from '../../ui/button/button.svelte';
 	import ModeSwitcher from '../ModeSwitcher.svelte';
 	import NavbarItem from './NavbarItem.svelte';
+	import Separator from '$lib/components/ui/separator/separator.svelte';
 
 	let showMobileNavbar: boolean;
+	function toggleNav() {
+		showMobileNavbar = !showMobileNavbar;
+		console.log(showMobileNavbar);
+	}
+
 	const navbarItems: Record<string, string> = {
 		Home: '/',
 		Dashboard: '/dash',
@@ -31,17 +37,27 @@
 </div>
 
 <!-- mobile navbar -->
-<div class="flex-col">
-	<div class="md:hidden flex flex-row justify-between my-4 mx-6 items-center">
+<div class="md:hidden flex-col">
+	<div class="flex flex-row justify-between my-4 mx-6 items-center">
 		<h1>Loggregator</h1>
-		<Menu class="hover:cursor-pointer" size={38} />
+		<div role="button" tabindex={1} on:click={toggleNav} on:keypress={toggleNav}>
+			<Menu class="hover:cursor-pointer" size={42} />
+		</div>
 	</div>
 
 	{#if showMobileNavbar}
-		<div>
+		<div class="flex flex-col justify-center items-center">
+			<Separator />
 			{#each Object.keys(navbarItems) as item}
 				<NavbarItem href={navbarItems[item]}>{item}</NavbarItem>
+				<Separator />
 			{/each}
+			<NavbarItem>
+				<div class="flex flex-row gap-4">
+					<ModeSwitcher />
+					<Button>Log In</Button>
+				</div>
+			</NavbarItem>
 		</div>
 	{/if}
 </div>
