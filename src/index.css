@@ -75,4 +75,19 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1 {
+    @apply text-4xl font-bold md:text-3xl;
+  }
+  h2 {
+    @apply text-3xl font-bold md:text-2xl;
+  }
+  h3 {
+    @apply text-2xl md:text-xl;
+  }
+  h4 {
+    @apply text-xl font-bold md:text-lg;
+  }
+  p {
+    @apply text-lg md:text-base;
+  }
 }

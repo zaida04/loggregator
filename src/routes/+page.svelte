@@ -1,5 +1,5 @@
 <script>
-	import ModeSwitcher from '$lib/components/reusable/ModeSwitcher.svelte';
+	import Navbar from '$lib/components/reusable/Navbar/Navbar.svelte';
 </script>
 
-<ModeSwitcher />
+<Navbar />
