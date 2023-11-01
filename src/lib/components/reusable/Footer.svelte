@@ -10,9 +10,9 @@
 		</div>
 
 		<div class="flex flex-row gap-4">
-			<p>Terms of Service</p>
-			<p>Privacy Policy</p>
-			<p>Support</p>
+			<a href="/tos">Terms of Service</a>
+			<a href="/privacy">Privacy Policy</a>
+			<a href="/support">Support</a>
 		</div>
 	</div>
 </div>
