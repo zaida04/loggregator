@@ -6,9 +6,17 @@
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 
 	let showMobileNavbar: boolean;
+	let navbarClosing: boolean = false;
 	function toggleNav() {
-		showMobileNavbar = !showMobileNavbar;
-		console.log(showMobileNavbar);
+		if (!showMobileNavbar) {
+			navbarClosing = false;
+			showMobileNavbar = true;
+		} else {
+			navbarClosing = true;
+			setTimeout(() => {
+				showMobileNavbar = false;
+			}, 250);
+		}
 	}
 
 	const navbarItems: Record<string, string> = {
@@ -38,7 +46,7 @@
 
 <!-- mobile navbar -->
 <div class="md:hidden flex-col">
-	<div class="flex flex-row justify-between my-4 mx-6 items-center">
+	<div class="z-10 bg-background relative flex flex-row justify-between py-4 mx-6 items-center">
 		<h1>Loggregator</h1>
 		<div role="button" tabindex={1} on:click={toggleNav} on:keypress={toggleNav}>
 			<Menu class="hover:cursor-pointer" size={42} />
@@ -46,7 +54,11 @@
 	</div>
 
 	{#if showMobileNavbar}
-		<div class="flex flex-col justify-center items-center">
+		<div
+			class={`z-1 absolute bg-background w-full flex flex-col justify-center items-center ${
+				navbarClosing ? 'animate-slideUp' : 'animate-slideDown'
+			}`}
+		>
 			<Separator />
 			{#each Object.keys(navbarItems) as item}
 				<NavbarItem href={navbarItems[item]}>{item}</NavbarItem>
@@ -58,6 +70,7 @@
 					<Button>Log In</Button>
 				</div>
 			</NavbarItem>
+			<Separator />
 		</div>
 	{/if}
 </div>

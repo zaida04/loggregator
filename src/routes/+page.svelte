@@ -1,11 +1,13 @@
 <script>
+	import CTA from '$lib/components/reusable/CTA.svelte';
 	import Hero from '$lib/components/reusable/Hero.svelte';
 	import Navbar from '$lib/components/reusable/Navbar/Navbar.svelte';
 	import TwoColumn from '$lib/components/reusable/TwoColumn/TwoColumn.svelte';
 	import TwoColumnItem from '$lib/components/reusable/TwoColumn/TwoColumnItem.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import Footer from '$lib/components/reusable/Footer.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
-	import { Menu, Upload } from 'lucide-svelte';
+	import { Upload } from 'lucide-svelte';
 	import { MagnifyingGlass } from 'radix-icons-svelte';
 </script>
 
@@ -33,3 +35,6 @@
 		description="We ingest every log you send our way and make it easy to search through your logs and view them in a digestible way"
 	/>
 </TwoColumn>
+<CTA />
+<Separator />
+<Footer />
