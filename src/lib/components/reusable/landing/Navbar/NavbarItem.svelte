@@ -2,7 +2,7 @@
 	export let href: string | null = null;
 </script>
 
-<h3 class="my-8 md:my-0 hover:underline underline-offset-4">
+<h3 class="my-8 md:my-0 hover:underline underline-offset-4 text-base">
 	{#if href !== null}
 		<a {href}>
 			<slot />

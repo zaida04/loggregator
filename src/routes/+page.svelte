@@ -1,7 +1,7 @@
 <script>
 	import CTA from '$lib/components/reusable/CTA.svelte';
 	import Hero from '$lib/components/reusable/Hero.svelte';
-	import Navbar from '$lib/components/reusable/Navbar/Navbar.svelte';
+	import Navbar from '$lib/components/reusable/landing/Navbar/Navbar.svelte';
 	import TwoColumn from '$lib/components/reusable/TwoColumn/TwoColumn.svelte';
 	import TwoColumnItem from '$lib/components/reusable/TwoColumn/TwoColumnItem.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';

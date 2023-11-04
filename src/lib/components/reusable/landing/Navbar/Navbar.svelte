@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Menu } from 'lucide-svelte';
-	import Button from '../../ui/button/button.svelte';
-	import ModeSwitcher from '../ModeSwitcher.svelte';
+	import Button from '../../../ui/button/button.svelte';
+	import ModeSwitcher from '../../ModeSwitcher.svelte';
 	import NavbarItem from './NavbarItem.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 
