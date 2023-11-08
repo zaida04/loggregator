@@ -1,9 +1,9 @@
 <script>
-	import CTA from '$lib/components/reusable/CTA.svelte';
-	import Hero from '$lib/components/reusable/Hero.svelte';
+	import CTA from '$lib/components/reusable/landing/CTA.svelte';
+	import Hero from '$lib/components/reusable/landing/Hero.svelte';
 	import Navbar from '$lib/components/reusable/landing/Navbar/Navbar.svelte';
-	import TwoColumn from '$lib/components/reusable/TwoColumn/TwoColumn.svelte';
-	import TwoColumnItem from '$lib/components/reusable/TwoColumn/TwoColumnItem.svelte';
+	import TwoColumn from '$lib/components/reusable/landing/TwoColumn/TwoColumn.svelte';
+	import TwoColumnItem from '$lib/components/reusable/landing/TwoColumn/TwoColumnItem.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Footer from '$lib/components/reusable/Footer.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';

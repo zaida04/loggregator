@@ -1,5 +1,5 @@
 <script>
-	import Button from '../ui/button/button.svelte';
+	import Button from '$lib/components/ui/button/button.svelte';
 </script>
 
 <div class="hidden md:flex flex-row p-8 m-4 bg-muted rounded-xl justify-between items-center">

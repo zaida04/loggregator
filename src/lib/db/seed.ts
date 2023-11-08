@@ -5,6 +5,7 @@ import { users, projects, logs } from './drizzle';
 const { client, db } = makeDB(process.env.DATABASE_URL!);
 
 async function main() {
+	console.log('Seeding database...');
 	await client.insert(users).values({
 		id: 1,
 		email: 'nico.03727@gmail.com',
@@ -24,6 +25,7 @@ async function main() {
 		receivedAt: new Date(new Date().getTime() + 1000),
 		content: 'Hello World!'
 	});
+	console.log('Done!');
 	db.end();
 }
 

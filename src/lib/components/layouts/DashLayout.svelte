@@ -4,5 +4,9 @@
 
 <div>
 	<Navbar />
-	<slot />
+	<div class="flex justify-center items-center">
+		<div class="w-4/5">
+			<slot />
+		</div>
+	</div>
 </div>

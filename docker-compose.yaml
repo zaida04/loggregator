@@ -1,0 +1,15 @@
+# generate me a docker compose file for my dev postgres db
+version: '3.1'
+services:
+  db:
+    image: postgres
+    container_name: LOGGREGATOR_DB
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: loggregator_password
+      POSTGRES_USER: loggregator_user
+      POSTGRES_DB: loggregator
+    volumes:
+      - ./data:/var/lib/postgresql/data
