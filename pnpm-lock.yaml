@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.291.0
     version: 0.291.0(svelte@4.0.5)
   mode-watcher:
-    specifier: ^0.0.5
-    version: 0.0.5(svelte@4.0.5)
+    specifier: ^0.1.2
+    version: 0.1.2(svelte@4.0.5)
   nanoid:
     specifier: ^5.0.4
     version: 5.0.4
@@ -3157,13 +3157,12 @@ packages:
       minimist: 1.2.8
     dev: true
 
-  /mode-watcher@0.0.5(svelte@4.0.5):
-    resolution: {integrity: sha512-a1ygOGLeHeJHM7uZYxzcV1QRsBjNRhr+YnbtcAgP9PGS3JIeJMmSntOKVc0anhRibGCq3omiGRamSt1eAAmpag==}
+  /mode-watcher@0.1.2(svelte@4.0.5):
+    resolution: {integrity: sha512-XTdPCdqC3kqSvB+Q262Kor983YJkkB2Z3vj9uqg5IqKQpOdiz+xB99Jihp8sWbyM67drC7KKp0Nt5FzCypZi2g==}
     peerDependencies:
       svelte: ^4.0.0
     dependencies:
       svelte: 4.0.5
-      svelte-persisted-store: 0.7.0(svelte@4.0.5)
     dev: false
 
   /mri@1.2.0:
@@ -4032,15 +4031,6 @@ packages:
       svelte: ^3.19.0 || ^4.0.0
     dependencies:
       svelte: 4.0.5
-
-  /svelte-persisted-store@0.7.0(svelte@4.0.5):
-    resolution: {integrity: sha512-PczYS60ysScQ0DmTCPXQm5rwt8FfQzSlx0lCbljbE6hTCKqXaw2bP8KH1+B7QTPmuiy/QbAk4pjYpNCmZhjyRw==}
-    engines: {node: '>=0.14'}
-    peerDependencies:
-      svelte: ^3.48.0 || >4.0.0
-    dependencies:
-      svelte: 4.0.5
-    dev: false
 
   /svelte-preprocess@5.0.4(postcss@8.4.31)(svelte@4.0.5)(typescript@5.2.2):
     resolution: {integrity: sha512-ABia2QegosxOGsVlsSBJvoWeXy1wUKSfF7SWJdTjLAbx/Y3SrVevvvbFNQqrSJw89+lNSsM58SipmZJ5SRi5iw==}
