@@ -4,6 +4,7 @@
 	import ModeSwitcher from '../ModeSwitcher.svelte';
 	import NavbarItem from './NavbarItem.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
+	import Logo from '../Logo.svelte';
 
 	let showMobileNavbar: boolean;
 	let navbarClosing: boolean = false;
@@ -29,7 +30,7 @@
 <!-- desktop navbar -->
 <div class="hidden md:flex justify-center gap-4 my-2">
 	<div class="w-4/5 flex justify-between items-center py-4">
-		<h1>Loggregator</h1>
+		<Logo />
 
 		<div class="flex flex-row gap-8 items-center">
 			{#each Object.keys(navbarItems) as item}
@@ -38,7 +39,7 @@
 		</div>
 
 		<div class="flex flex-row items-center gap-4">
-			<ModeSwitcher />
+			<!-- <ModeSwitcher /> -->
 			<Button>Log In</Button>
 		</div>
 	</div>
@@ -47,7 +48,7 @@
 <!-- mobile navbar -->
 <div class="md:hidden flex-col">
 	<div class="z-10 bg-background relative flex flex-row justify-between py-4 mx-6 items-center">
-		<h1>Loggregator</h1>
+		<Logo />
 		<div role="button" tabindex={1} on:click={toggleNav} on:keypress={toggleNav}>
 			<Menu class="hover:cursor-pointer" size={42} />
 		</div>
@@ -66,7 +67,7 @@
 			{/each}
 			<NavbarItem>
 				<div class="flex flex-row gap-4">
-					<ModeSwitcher />
+					<!-- <ModeSwitcher /> -->
 					<Button>Log In</Button>
 				</div>
 			</NavbarItem>

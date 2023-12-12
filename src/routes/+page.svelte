@@ -27,7 +27,7 @@
 	<TwoColumnItem
 		icon={Upload}
 		title="Send your logs from your app"
-		description="Use good ol' HTTP requests or use a plugin available for your favorite logger."
+		description="Use good ol' HTTP requests or a plugin available for your favorite logger."
 	/>
 	<TwoColumnItem
 		icon={MagnifyingGlass}
