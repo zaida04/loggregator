@@ -1,4 +1,5 @@
 import type { HandleClientError } from '@sveltejs/kit'
+import { dark } from "@clerk/themes";
 // To use Clerk components:
 import { initializeClerkClient } from 'clerk-sveltekit/client'
 // Or for headless mode:
@@ -10,6 +11,9 @@ initializeClerkClient(PUBLIC_CLERK_PUBLISHABLE_KEY, {
     afterSignUpUrl: '/app',
     signInUrl: '/sign-in',
     signUpUrl: '/sign-up',
+    appearance: {
+        baseTheme: dark
+    }
 })
 
 export const handleError: HandleClientError = async ({ error, event }) => {

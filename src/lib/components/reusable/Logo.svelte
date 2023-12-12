@@ -1,7 +1,15 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	export let href = '/';
+
+	function handleClick() {
+		console.log($page.url);
+		if ($page.url.pathname === href) {
+			window.location.reload();
+		}
+	}
 </script>
 
-<a {href}>
+<a {href} on:click={handleClick}>
 	<h1 class="hover:underline underline-offset-2">Loggregator</h1>
 </a>

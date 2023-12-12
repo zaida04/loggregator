@@ -8,6 +8,6 @@
 		<p>Leave the log collection to us.</p>
 	</div>
 	<div>
-		<Button>Get Started</Button>
+		<a href="/app"><Button>Get Started</Button></a>
 	</div>
 </div>

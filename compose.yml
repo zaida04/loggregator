@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:12.17
+    restart: always
+    ports:
+      - 7777:5432
+    environment:
+      POSTGRES_USER: LOGG_USER
+      POSTGRES_PASSWORD: LOGG_PASS
+      POSTGRES_DB: LOGG_DB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

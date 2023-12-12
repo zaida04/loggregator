@@ -17,7 +17,7 @@
 		<h1 class="text-4xl md:text-6xl">Store, view, & search <br />your logs</h1>
 		<h3>That's it. Nothing complicated, only what you need.</h3>
 		<div class="flex flex-row gap-4">
-			<Button>Get Started</Button>
+			<a href="/app"><Button>Get Started</Button></a>
 			<Button>Documentation</Button>
 		</div>
 	</div>
