@@ -2,11 +2,28 @@
 	import Logo from '$lib/components/reusable/Logo.svelte';
 	import Box from '$lib/components/ui/box/box.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
+	import UserButton from 'clerk-sveltekit/client/UserButton.svelte';
+	import SignedIn from 'clerk-sveltekit/client/SignedIn.svelte';
 </script>
 
 <div class="flex flex-col items-center gap-4 my-2">
 	<div class="w-4/5 flex justify-between items-center py-4">
 		<Logo href="/app" />
+		<SignedIn>
+			<div class="flex flex-row gap-4 items-center">
+				<p class="text-sm">Your Account</p>
+				<div class="bg-accent rounded-full border-primary-foreground">
+					<UserButton
+						appearance={{
+							elements: {
+								userButtonAvatarBox: 'h-9 w-9'
+							}
+						}}
+						afterSignOutUrl="/"
+					/>
+				</div>
+			</div>
+		</SignedIn>
 	</div>
 
 	<div class="w-4/5 mb-4 flex gap-8 items-end">
