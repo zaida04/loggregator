@@ -15,13 +15,13 @@
 			navbarClosing = true;
 			setTimeout(() => {
 				showMobileNavbar = false;
-			}, 250);
+			}, 500);
 		}
 	}
 
 	const navbarItems: Record<string, string> = {
 		Home: '/',
-		Dashboard: '/dash',
+		Dashboard: '/app',
 		GitHub: 'https://github.com/zaida04/loggregator.git'
 	};
 </script>
@@ -56,7 +56,7 @@
 	{#if showMobileNavbar}
 		<div
 			class={`z-1 absolute bg-background w-full flex flex-col justify-center items-center ${
-				navbarClosing ? 'animate-slideUp' : 'animate-slideDown'
+				navbarClosing ? 'animate-slide-up' : 'animate-slide-down'
 			}`}
 		>
 			<Separator />

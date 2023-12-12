@@ -13,7 +13,7 @@
 
 <Navbar />
 <Hero>
-	<div class="flex flex-col gap-6 items-center text-center">
+	<div class="flex flex-col gap-6 items-center text-center mx-4">
 		<h1 class="text-4xl md:text-6xl">Store, view, & search <br />your logs</h1>
 		<h3>That's it. Nothing complicated, only what you need.</h3>
 		<div class="flex flex-row gap-4">

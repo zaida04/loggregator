@@ -15,18 +15,18 @@ const config = {
 		},
 		extend: {
 			keyframes: {
-				slideDown: {
+				'slide-down': {
 					'0%': { transform: 'translateY(-100%)' },
 					'100%': { transform: 'translateY(0)' }
 				},
-				slideUp: {
+				'slide-up': {
 					'0%': { transform: 'translateY(0)' },
 					'100%': { transform: 'translateY(-100%)' }
 				}
 			},
 			animation: {
-				slideDown: 'slideDown 0.5s ease-in-out forwards',
-				slideUp: 'slideUp 0.5s ease-in-out forwards'
+				'slide-down': 'slide-down 0.5s ease-in-out forwards',
+				'slide-up': 'slide-up 0.5s ease-in-out forwards'
 			},
 			colors: {
 				border: 'hsl(var(--border) / <alpha-value>)',
