@@ -39,7 +39,7 @@
 		</div>
 
 		<div class="flex flex-row items-center gap-4">
-			<!-- <ModeSwitcher /> -->
+			<ModeSwitcher />
 			<Button>Log In</Button>
 		</div>
 	</div>
@@ -67,7 +67,7 @@
 			{/each}
 			<NavbarItem>
 				<div class="flex flex-row gap-4">
-					<!-- <ModeSwitcher /> -->
+					<ModeSwitcher />
 					<Button>Log In</Button>
 				</div>
 			</NavbarItem>
