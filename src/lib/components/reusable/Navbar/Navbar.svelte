@@ -48,7 +48,7 @@
 				</a>
 			</SignedIn>
 			<SignedOut>
-				<Button>Log In</Button>
+				<a href="/app"><Button>Log In</Button></a>
 			</SignedOut>
 		</div>
 	</div>
