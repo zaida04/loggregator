@@ -1,33 +1,11 @@
 <script>
-	import Logo from '$lib/components/reusable/Logo.svelte';
 	import Box from '$lib/components/ui/box/box.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
-	import UserButton from 'clerk-sveltekit/client/UserButton.svelte';
-	import SignedIn from 'clerk-sveltekit/client/SignedIn.svelte';
-	import ModeSwitcher from '$lib/components/reusable/ModeSwitcher.svelte';
+	import DashNavbar from '$lib/components/reusable/DashNavbar/DashNavbar.svelte';
 </script>
 
-<div class="flex flex-col items-center gap-4 my-2">
-	<div class="w-4/5 flex justify-between items-center py-4">
-		<Logo href="/app" />
-		<div class="flex gap-2">
-			<ModeSwitcher />
-			<SignedIn>
-				<div class="flex flex-row gap-4 items-center">
-					<div class="bg-accent rounded-full border-primary-foreground">
-						<UserButton
-							appearance={{
-								elements: {
-									userButtonAvatarBox: 'h-9 w-9'
-								}
-							}}
-							afterSignOutUrl="/"
-						/>
-					</div>
-				</div>
-			</SignedIn>
-		</div>
-	</div>
+<div class="flex flex-col min-h-screen overflow-y-scroll items-center gap-4">
+	<DashNavbar />
 
 	<div class="w-4/5 mb-4 flex gap-8 items-end">
 		<h1 class="font-semibold">Your Projects</h1>
@@ -37,7 +15,7 @@
 	<div class="flex gap-8 w-4/5">
 		<a
 			href="/app/projects/test-project"
-			class="w-64 border-2 rounded-md p-6 shadow-primary-foreground shadow-lg transition-all hover:border-b-8"
+			class="w-64 border-2 rounded-md p-6 shadow-primary-foreground shadow-md transition-all hover:border-b-4 hover:shadow-2xl hover:shadow-primary-foreground"
 		>
 			<h2 class="mb-2">Test Project</h2>
 			<div class="text-gray-400">

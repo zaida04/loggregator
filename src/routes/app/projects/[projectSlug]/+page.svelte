@@ -4,7 +4,7 @@
 	import Label from '$lib/components/ui/label/label.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import Alert from '$lib/components/ui/alert/alert.svelte';
-	import Logo from '$lib/components/reusable/Logo.svelte';
+	import DashNavbar from '$lib/components/reusable/DashNavbar/DashNavbar.svelte';
 
 	const projectSlug = $page.params.projectSlug;
 	const lines = ['This is log 1', 'This is log 2'];
@@ -18,14 +18,10 @@
 	// }
 </script>
 
-<div class="flex flex-col items-center gap-4 my-2">
-	<div class="w-4/5 flex justify-between items-center py-4">
-		<div class="flex flex-row gap-4 items-center">
-			<Logo href="/app" />
-			<p>•</p>
-			<h1>{projectSlug}</h1>
-		</div>
-	</div>
+<div class="flex flex-col items-center gap-4">
+	<DashNavbar>
+		<h1>{projectSlug}</h1>
+	</DashNavbar>
 
 	<div class="w-4/5">
 		<h1 class="font-normal mb-2">Project Title</h1>

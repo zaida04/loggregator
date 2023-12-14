@@ -1,17 +1,21 @@
 import { json, type RequestEvent } from '@sveltejs/kit'
 import { z } from 'zod';
-
-// /api/newsletter POST
+import { db } from '$db';
+import { lines } from '$db/schema';
+import { generateId } from '$lib/nanoid';
 
 export async function POST(event: RequestEvent) {
-    const data = await event.request.json();
-    console.log(data);
+    const data: z.infer<ReturnType<typeof _validator>> = await event.request.json();
+    await db.insert(lines).values({
+        id: generateId(),
+        content: data.content,
+        projectId: data.projectId,
+    });
 
-    // it's common to return JSON, so SvelteKit has a helper
     return json({ success: true })
 }
 
 export const _validator = z.object({
-    email: z.string().email(),
-    name: z.string().min(2).max(100),
+    content: z.string(),
+    projectId: z.string(),
 });
