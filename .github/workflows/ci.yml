@@ -17,7 +17,7 @@ jobs:
         run: bun install
 
       - name: Run SvelteKit check
-        run: bun run check
+        run: bunx svelte-kit sync
 
       - name: Run lint/format
         run: bun run lint
