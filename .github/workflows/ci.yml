@@ -24,3 +24,5 @@ jobs:
 
       - name: Run typecheck
         run: bun run typecheck
+        env:
+          PUBLIC_CLERK_PUBLISHABLE_KEY: "dummy-key"
