@@ -9,6 +9,8 @@ jobs:
   check:
     name: lint/format/typecheck
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_CLERK_PUBLISHABLE_KEY: "dummy-key"
     steps:
       - uses: actions/checkout@v3
       - uses: oven-sh/setup-bun@v1
@@ -24,5 +26,3 @@ jobs:
 
       - name: Run typecheck
         run: bun run typecheck
-        env:
-          PUBLIC_CLERK_PUBLISHABLE_KEY: "dummy-key"
