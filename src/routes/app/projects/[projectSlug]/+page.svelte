@@ -1,13 +1,12 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { Input } from '$lib/components/ui/input';
-	import Label from '$lib/components/ui/label/label.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Alert from '$lib/components/ui/alert/alert.svelte';
-	import DashNavbar from '$lib/components/reusable/DashNavbar/DashNavbar.svelte';
+	import { page } from "$app/stores";
+	import { Input } from "$lib/components/ui/input";
+	import Label from "$lib/components/ui/label/label.svelte";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Alert from "$lib/components/ui/alert/alert.svelte";
+	import DashNavbar from "$lib/components/reusable/DashNavbar/DashNavbar.svelte";
 
-	const projectSlug = $page.params.projectSlug;
-	const lines = ['This is log 1', 'This is log 2'];
+	const lines = ["This is log 1", "This is log 2"];
 
 	// function handleCopy(event: ClipboardEvent) {
 	// 	const selection = document.getSelection();
@@ -16,23 +15,60 @@
 	// 	event.clipboardData?.setData('text/plain', text);
 	// 	event.preventDefault();
 	// }
+	function formatDate(date: Date) {
+		const monthNames = [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December",
+		];
+		const day = date.getDate();
+		const month = monthNames[date.getMonth()];
+		const year = date.getFullYear();
+
+		return `${month} ${day}, ${year}`;
+	}
+
+	export let data;
+	console.log(data);
 </script>
 
 <div class="flex flex-col items-center gap-4">
 	<DashNavbar>
-		<h1>{projectSlug}</h1>
+		<h1>{data.project.name}</h1>
 	</DashNavbar>
 
 	<div class="w-4/5">
-		<h1 class="font-normal mb-2">Project Title</h1>
-		<p class="text-gray-400 text-sm mb-10">Created at DATE-TIME</p>
+		<h1 class="font-normal mb-2">{data.project.name}</h1>
+		<p class="text-gray-400 text-sm mb-10">
+			Created {formatDate(data.project.created_at)}
+		</p>
 
 		<div class="mb-4 flex justify-between gap-2 items-end">
 			<div class="w-1/2">
 				<Label>Your Token</Label>
 				<div class="flex flex-row gap-2">
-					<Input type="text" placeholder="this-is-a-test-token" class="max-w-xs" disabled />
-					<Button>Copy</Button>
+					<Input
+						type="text"
+						placeholder={data.project.token}
+						class="max-w-xs"
+						disabled
+					/>
+					<Button
+						on:click={() => {
+							navigator.clipboard.writeText(data.project.token);
+						}}
+					>
+						Copy
+					</Button>
 				</div>
 			</div>
 
@@ -44,7 +80,7 @@
 		>
 			{#each lines as line}
 				<div class="flex gap-3 text-gray-300">
-					<p class="text-sm select-none">{'>'}</p>
+					<p class="text-sm select-none">{">"}</p>
 					<p class="text-sm">{line}</p>
 				</div>
 			{/each}
@@ -56,8 +92,8 @@
 				<Alert variant="destructive">This is the danger zone!</Alert>
 				<div>
 					<p class="mb-2">
-						Delete your project. This will immediately remove all logs and resources allocated to
-						your project.
+						Delete your project. This will immediately remove all
+						logs and resources allocated to your project.
 					</p>
 					<Button variant="destructive">Delete Project</Button>
 				</div>

@@ -1,8 +1,11 @@
-import { join } from "path";
-import { config } from "dotenv";
+import "dotenv/config";
+
 import { migrate } from "drizzle-orm/node-postgres/migrator";
-import { db } from "./index";
-config({ path: join(__dirname, "..", "..", "..", ".env") });
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
+
+const client = postgres(process.env.DATABASE_URL!);
+const db = drizzle(client);
 
 // this will automatically run needed migrations on the database
 async function main() {

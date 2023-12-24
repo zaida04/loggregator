@@ -1,20 +1,22 @@
 <script>
-	import CTA from '$lib/components/reusable/CTA.svelte';
-	import Hero from '$lib/components/reusable/Hero.svelte';
-	import Navbar from '$lib/components/reusable/Navbar/Navbar.svelte';
-	import TwoColumn from '$lib/components/reusable/TwoColumn/TwoColumn.svelte';
-	import TwoColumnItem from '$lib/components/reusable/TwoColumn/TwoColumnItem.svelte';
-	import Button from '$lib/components/ui/button/button.svelte';
-	import Footer from '$lib/components/reusable/Footer.svelte';
-	import Separator from '$lib/components/ui/separator/separator.svelte';
-	import { Upload } from 'lucide-svelte';
-	import { MagnifyingGlass } from 'radix-icons-svelte';
+	import CTA from "$lib/components/reusable/CTA.svelte";
+	import Hero from "$lib/components/reusable/Hero.svelte";
+	import Navbar from "$lib/components/reusable/Navbar/Navbar.svelte";
+	import TwoColumn from "$lib/components/reusable/TwoColumn/TwoColumn.svelte";
+	import TwoColumnItem from "$lib/components/reusable/TwoColumn/TwoColumnItem.svelte";
+	import Button from "$lib/components/ui/button/button.svelte";
+	import Footer from "$lib/components/reusable/Footer.svelte";
+	import Separator from "$lib/components/ui/separator/separator.svelte";
+	import { Upload } from "lucide-svelte";
+	import { MagnifyingGlass } from "radix-icons-svelte";
 </script>
 
 <Navbar />
 <Hero>
 	<div class="flex flex-col gap-6 items-center text-center mx-4">
-		<h1 class="text-4xl md:text-6xl">Store, view, & search <br />your logs</h1>
+		<h1 class="text-4xl md:text-6xl">
+			Store, view, & search <br />your logs
+		</h1>
 		<h3>That's it. Nothing complicated, only what you need.</h3>
 		<div class="flex flex-row gap-4">
 			<a href="/app"><Button>Get Started</Button></a>
