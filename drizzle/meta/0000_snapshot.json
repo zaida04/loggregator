@@ -1,5 +1,5 @@
 {
-  "id": "578f4f7e-6f86-48ab-a893-52d721deda80",
+  "id": "4d3e61d3-2e7d-412e-b246-55e8a671e331",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -26,8 +26,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "created_at": {
-          "name": "created_at",
+        "createdAt": {
+          "name": "createdAt",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true
@@ -66,14 +66,14 @@
           "primaryKey": false,
           "notNull": true
         },
-        "created_at": {
-          "name": "created_at",
+        "createdAt": {
+          "name": "createdAt",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true
         },
-        "updated_at": {
-          "name": "updated_at",
+        "updatedAt": {
+          "name": "updatedAt",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": false

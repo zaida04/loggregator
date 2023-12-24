@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	export let href = '/';
+	import { page } from "$app/stores";
+	export let href = "/";
 
 	function handleClick() {
-		console.log($page.url);
 		if ($page.url.pathname === href) {
 			window.location.reload();
 		}

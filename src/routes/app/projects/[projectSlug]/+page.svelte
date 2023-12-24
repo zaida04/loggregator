@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from "$app/stores";
 	import { Input } from "$lib/components/ui/input";
 	import Label from "$lib/components/ui/label/label.svelte";
 	import Button from "$lib/components/ui/button/button.svelte";
@@ -37,6 +36,17 @@
 		return `${month} ${day}, ${year}`;
 	}
 
+	function formatLineDate(date: Date) {
+		return new Intl.DateTimeFormat("en-US", {
+			year: "numeric",
+			month: "2-digit",
+			day: "2-digit",
+			hour: "2-digit",
+			minute: "2-digit",
+			hour12: true,
+		}).format(date);
+	}
+
 	export let data;
 	console.log(data);
 </script>
@@ -49,7 +59,7 @@
 	<div class="w-4/5">
 		<h1 class="font-normal mb-2">{data.project.name}</h1>
 		<p class="text-gray-400 text-sm mb-10">
-			Created {formatDate(data.project.created_at)}
+			Created {formatDate(data.project.createdAt)}
 		</p>
 
 		<div class="mb-4 flex justify-between gap-2 items-end">
@@ -78,10 +88,12 @@
 		<div
 			class="mb-4 flex flex-col h-80 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
 		>
-			{#each lines as line}
-				<div class="flex gap-3 text-gray-300">
-					<p class="text-sm select-none">{">"}</p>
-					<p class="text-sm">{line}</p>
+			{#each data.lines as line}
+				<div class="flex gap-2 text-gray-300">
+					<p class="text-sm select-none text-gray-500">
+						{formatLineDate(line.createdAt)}{" >"}
+					</p>
+					<p class="text-sm">{line.content}</p>
 				</div>
 			{/each}
 		</div>

@@ -1,10 +1,10 @@
 import { type Handle, json } from "@sveltejs/kit";
 import { z } from "zod";
-import { _validator as projectsValidator } from "./routes/api/projects/+server";
+import { _validator as loggerValidator } from "./routes/api/logger/+server";
 
 const map: Record<string, Record<string, z.ZodTypeAny>> = {
-	"/api/projects": {
-		POST: projectsValidator,
+	"/api/logger": {
+		POST: loggerValidator,
 	},
 };
 

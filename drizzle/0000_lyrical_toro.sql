@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS "lines" (
 	"id" text PRIMARY KEY NOT NULL,
 	"content" text,
 	"projectId" text NOT NULL,
-	"created_at" timestamp NOT NULL
+	"createdAt" timestamp NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "projects" (
@@ -10,6 +10,6 @@ CREATE TABLE IF NOT EXISTS "projects" (
 	"name" text NOT NULL,
 	"ownerId" text NOT NULL,
 	"token" text NOT NULL,
-	"created_at" timestamp NOT NULL,
-	"updated_at" timestamp
+	"createdAt" timestamp NOT NULL,
+	"updatedAt" timestamp
 );
