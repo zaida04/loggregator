@@ -1,7 +1,9 @@
 import { pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
 const id = (name = "id") => text(name).primaryKey();
-const createdAt = timestamp("createdAt").notNull().$defaultFn(() => new Date());
+const createdAt = timestamp("createdAt")
+	.notNull()
+	.$defaultFn(() => new Date());
 const updatedAt = timestamp("updatedAt");
 
 export const projects = pgTable("projects", {
@@ -18,6 +20,6 @@ export const lines = pgTable("lines", {
 	id: id(),
 	content: text("content"),
 	projectId: text("projectId").notNull(),
-	createdAt
+	createdAt,
 });
 export type Line = typeof lines.$inferSelect;

@@ -1,0 +1,560 @@
+{
+	"chunks": {
+		"_app/immutable/nodes/7.7d148ff9.js": {
+			"id": "_app/immutable/nodes/7.7d148ff9.js",
+			"isEntry": true,
+			"size": 1146,
+			"contents": {
+				"../../../../../../node_modules/clerk-sveltekit/dist/client/SignIn.svelte": {
+					"filePath": "../../../../../../node_modules/clerk-sveltekit/dist/client/SignIn.svelte",
+					"size": 595,
+					"packageName": "clerk-sveltekit"
+				},
+				"../../../../../../src/routes/sign-in/+page.svelte": {
+					"filePath": "../../../../../../src/routes/sign-in/+page.svelte",
+					"size": 203
+				}
+			}
+		},
+		"_app/immutable/nodes/2.64bef71d.js": {
+			"id": "_app/immutable/nodes/2.64bef71d.js",
+			"isEntry": true,
+			"size": 1069,
+			"contents": {
+				"../../../../../../src/routes/app/projects/[projectSlug]/+error.svelte": {
+					"filePath": "../../../../../../src/routes/app/projects/[projectSlug]/+error.svelte",
+					"size": 217
+				}
+			}
+		},
+		"_app/immutable/nodes/4.90ee72c0.js": {
+			"id": "_app/immutable/nodes/4.90ee72c0.js",
+			"isEntry": true,
+			"size": 4678,
+			"contents": {
+				"../../../../../../src/lib/components/ui/box/box.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/box/box.svelte",
+					"size": 433
+				},
+				"../../../../../../src/routes/app/+page.svelte": {
+					"filePath": "../../../../../../src/routes/app/+page.svelte",
+					"size": 3501
+				}
+			}
+		},
+		"_app/immutable/nodes/0.276ad7ce.js": {
+			"id": "_app/immutable/nodes/0.276ad7ce.js",
+			"isEntry": true,
+			"size": 1979,
+			"contents": {
+				"../../../../../../node_modules/svelte/src/runtime/internal/globals.js": {
+					"filePath": "../../../../../../node_modules/svelte/src/runtime/internal/globals.js",
+					"size": 153,
+					"packageName": "svelte"
+				},
+				"../../../../../../node_modules/mode-watcher/dist/mode-watcher.svelte": {
+					"filePath": "../../../../../../node_modules/mode-watcher/dist/mode-watcher.svelte",
+					"size": 957,
+					"packageName": "mode-watcher"
+				},
+				"../../../../../../src/routes/+layout.svelte": {
+					"filePath": "../../../../../../src/routes/+layout.svelte",
+					"size": 555
+				}
+			}
+		},
+		"_app/immutable/entry/start.93c0c896.js": {
+			"id": "_app/immutable/entry/start.93c0c896.js",
+			"isEntry": true,
+			"size": 24148,
+			"contents": {
+				"../../../../../../node_modules/@sveltejs/kit/src/utils/url.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/utils/url.js",
+					"size": 723,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/hash.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/hash.js",
+					"size": 336,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/client/fetcher.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/client/fetcher.js",
+					"size": 1199,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/utils/routing.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/utils/routing.js",
+					"size": 1763,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/client/parse.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/client/parse.js",
+					"size": 478,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/client/session-storage.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/client/session-storage.js",
+					"size": 139,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/utils/array.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/utils/array.js",
+					"size": 43,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/utils/exports.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/utils/exports.js",
+					"size": 118,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/utils/promises.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/utils/promises.js",
+					"size": 202,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/control.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/control.js",
+					"size": 325,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/shared.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/shared.js",
+					"size": 67,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/client/client.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/client/client.js",
+					"size": 18335,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/client/start.js",
+					"size": 156,
+					"packageName": "@sveltejs/src"
+				}
+			}
+		},
+		"_app/immutable/nodes/1.7c4ff97a.js": {
+			"id": "_app/immutable/nodes/1.7c4ff97a.js",
+			"isEntry": true,
+			"size": 837,
+			"contents": {
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+					"size": 567,
+					"packageName": "@sveltejs/src"
+				}
+			}
+		},
+		"_app/immutable/nodes/8.c3284d9d.js": {
+			"id": "_app/immutable/nodes/8.c3284d9d.js",
+			"isEntry": true,
+			"size": 1146,
+			"contents": {
+				"../../../../../../node_modules/clerk-sveltekit/dist/client/SignUp.svelte": {
+					"filePath": "../../../../../../node_modules/clerk-sveltekit/dist/client/SignUp.svelte",
+					"size": 595,
+					"packageName": "clerk-sveltekit"
+				},
+				"../../../../../../src/routes/sign-up/+page.svelte": {
+					"filePath": "../../../../../../src/routes/sign-up/+page.svelte",
+					"size": 203
+				}
+			}
+		},
+		"_app/immutable/nodes/5.36729f91.js": {
+			"id": "_app/immutable/nodes/5.36729f91.js",
+			"isEntry": true,
+			"size": 8436,
+			"contents": {
+				"../../../../../../src/lib/components/ui/alert/index.ts": {
+					"filePath": "../../../../../../src/lib/components/ui/alert/index.ts",
+					"size": 463
+				},
+				"../../../../../../src/lib/components/ui/alert/alert.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/alert/alert.svelte",
+					"size": 973
+				},
+				"../../../../../../src/routes/app/projects/[projectSlug]/+page.svelte": {
+					"filePath": "../../../../../../src/routes/app/projects/[projectSlug]/+page.svelte",
+					"size": 6189
+				}
+			}
+		},
+		"_app/immutable/nodes/3.7463c723.js": {
+			"id": "_app/immutable/nodes/3.7463c723.js",
+			"isEntry": true,
+			"size": 25031,
+			"contents": {
+				"../../../../../../node_modules/bits-ui/dist/bits/separator/components/Separator.svelte": {
+					"filePath": "../../../../../../node_modules/bits-ui/dist/bits/separator/components/Separator.svelte",
+					"size": 1932,
+					"packageName": "bits-ui"
+				},
+				"../../../../../../node_modules/lucide-svelte/dist/svelte/icons/database.svelte": {
+					"filePath": "../../../../../../node_modules/lucide-svelte/dist/svelte/icons/database.svelte",
+					"size": 1053,
+					"packageName": "lucide-svelte"
+				},
+				"../../../../../../node_modules/lucide-svelte/dist/svelte/icons/menu.svelte": {
+					"filePath": "../../../../../../node_modules/lucide-svelte/dist/svelte/icons/menu.svelte",
+					"size": 1052,
+					"packageName": "lucide-svelte"
+				},
+				"../../../../../../node_modules/lucide-svelte/dist/svelte/icons/upload.svelte": {
+					"filePath": "../../../../../../node_modules/lucide-svelte/dist/svelte/icons/upload.svelte",
+					"size": 826,
+					"packageName": "lucide-svelte"
+				},
+				"../../../../../../src/lib/components/reusable/CTA.svelte": {
+					"filePath": "../../../../../../src/lib/components/reusable/CTA.svelte",
+					"size": 1257
+				},
+				"../../../../../../src/lib/components/reusable/Hero.svelte": {
+					"filePath": "../../../../../../src/lib/components/reusable/Hero.svelte",
+					"size": 496
+				},
+				"../../../../../../src/lib/components/reusable/Navbar/NavbarItem.svelte": {
+					"filePath": "../../../../../../src/lib/components/reusable/Navbar/NavbarItem.svelte",
+					"size": 1352
+				},
+				"../../../../../../src/lib/components/ui/separator/separator.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/separator/separator.svelte",
+					"size": 1107
+				},
+				"../../../../../../src/lib/components/reusable/Navbar/Navbar.svelte": {
+					"filePath": "../../../../../../src/lib/components/reusable/Navbar/Navbar.svelte",
+					"size": 7764
+				},
+				"../../../../../../src/lib/components/reusable/TwoColumn/TwoColumn.svelte": {
+					"filePath": "../../../../../../src/lib/components/reusable/TwoColumn/TwoColumn.svelte",
+					"size": 392
+				},
+				"../../../../../../src/lib/components/reusable/TwoColumn/TwoColumnItem.svelte": {
+					"filePath": "../../../../../../src/lib/components/reusable/TwoColumn/TwoColumnItem.svelte",
+					"size": 1960
+				},
+				"../../../../../../src/lib/components/reusable/Footer.svelte": {
+					"filePath": "../../../../../../src/lib/components/reusable/Footer.svelte",
+					"size": 257
+				},
+				"../../../../../../node_modules/radix-icons-svelte/Icons/MagnifyingGlass.svelte": {
+					"filePath": "../../../../../../node_modules/radix-icons-svelte/Icons/MagnifyingGlass.svelte",
+					"size": 1424,
+					"packageName": "radix-icons-svelte"
+				},
+				"../../../../../../src/routes/+page.svelte": {
+					"filePath": "../../../../../../src/routes/+page.svelte",
+					"size": 3436
+				}
+			}
+		},
+		"_app/immutable/nodes/6.c3cfe326.js": {
+			"id": "_app/immutable/nodes/6.c3cfe326.js",
+			"isEntry": true,
+			"size": 116908,
+			"contents": {
+				"../../../../../../node_modules/esm-env/prod-browser.js": {
+					"filePath": "../../../../../../node_modules/esm-env/prod-browser.js",
+					"size": 12,
+					"packageName": "esm-env"
+				},
+				"../../../../../../node_modules/svelte/src/runtime/internal/await_block.js": {
+					"filePath": "../../../../../../node_modules/svelte/src/runtime/internal/await_block.js",
+					"size": 792,
+					"packageName": "svelte"
+				},
+				"../../../../../../node_modules/devalue/src/utils.js": {
+					"filePath": "../../../../../../node_modules/devalue/src/utils.js",
+					"size": 892,
+					"packageName": "devalue"
+				},
+				"../../../../../../node_modules/devalue/src/stringify.js": {
+					"filePath": "../../../../../../node_modules/devalue/src/stringify.js",
+					"size": 1710,
+					"packageName": "devalue"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/app/environment.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/app/environment.js",
+					"size": 80,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/formsnap/dist/components/form-description.svelte": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/components/form-description.svelte",
+					"size": 1281,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/stringPath.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/stringPath.js",
+					"size": 202,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/index.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/index.js",
+					"size": 89,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/traversal.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/traversal.js",
+					"size": 1833,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/client/proxies.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/client/proxies.js",
+					"size": 1353,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/klona.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/klona.js",
+					"size": 892,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/utils.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/utils.js",
+					"size": 28,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/schemaEntity.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/schemaEntity.js",
+					"size": 471,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/errors.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/errors.js",
+					"size": 1205,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/client/clientValidation.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/client/clientValidation.js",
+					"size": 3858,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/runtime/app/forms.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/runtime/app/forms.js",
+					"size": 1700,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/client/elements.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/client/elements.js",
+					"size": 374,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/client/form.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/client/form.js",
+					"size": 1997,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/client/formEnhance.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/client/formEnhance.js",
+					"size": 5074,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/@sveltejs/kit/src/exports/index.js": {
+					"filePath": "../../../../../../node_modules/@sveltejs/kit/src/exports/index.js",
+					"size": 16,
+					"packageName": "@sveltejs/src"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/client/index.js": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/client/index.js",
+					"size": 7665,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/form-field/create-field.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/form-field/create-field.js",
+					"size": 745,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/form-field/create-actions.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/form-field/create-actions.js",
+					"size": 2081,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/events.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/events.js",
+					"size": 148,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/is.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/is.js",
+					"size": 160,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/derived.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/derived.js",
+					"size": 336,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/form-field/create-handlers.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/form-field/create-handlers.js",
+					"size": 233,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/form-field/create-ids.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/form-field/create-ids.js",
+					"size": 146,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/form/index.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/form/index.js",
+					"size": 16,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/dom.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/dom.js",
+					"size": 230,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/components/form-field.svelte": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/components/form-field.svelte",
+					"size": 1818,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/components/form-validation.svelte": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/components/form-validation.svelte",
+					"size": 1241,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/helpers/get-form-schema.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/helpers/get-form-schema.js",
+					"size": 60,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/sveltekit-superforms/dist/client/SuperDebug.svelte": {
+					"filePath": "../../../../../../node_modules/sveltekit-superforms/dist/client/SuperDebug.svelte",
+					"size": 8918,
+					"packageName": "sveltekit-superforms"
+				},
+				"../../../../../../node_modules/formsnap/dist/components/form.svelte": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/components/form.svelte",
+					"size": 3983,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/internal/style.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/internal/style.js",
+					"size": 218,
+					"packageName": "formsnap"
+				},
+				"../../../../../../node_modules/formsnap/dist/helpers/get-form-field.js": {
+					"filePath": "../../../../../../node_modules/formsnap/dist/helpers/get-form-field.js",
+					"size": 335,
+					"packageName": "formsnap"
+				},
+				"../../../../../../src/lib/components/ui/form/form-button.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/form/form-button.svelte",
+					"size": 1003
+				},
+				"../../../../../../src/lib/components/ui/form/form-description.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/form/form-description.svelte",
+					"size": 791
+				},
+				"../../../../../../src/lib/components/ui/form/form-input.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/form/form-input.svelte",
+					"size": 1484
+				},
+				"../../../../../../src/lib/components/ui/form/form-item.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/form/form-item.svelte",
+					"size": 1048
+				},
+				"../../../../../../src/lib/components/ui/form/form-label.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/form/form-label.svelte",
+					"size": 908
+				},
+				"../../../../../../src/lib/components/ui/form/form-validation.svelte": {
+					"filePath": "../../../../../../src/lib/components/ui/form/form-validation.svelte",
+					"size": 646
+				},
+				"../../../../../../src/lib/components/ui/form/index.ts": {
+					"filePath": "../../../../../../src/lib/components/ui/form/index.ts",
+					"size": 18
+				},
+				"../../../../../../node_modules/zod/lib/index.mjs": {
+					"filePath": "../../../../../../node_modules/zod/lib/index.mjs",
+					"size": 53739,
+					"packageName": "zod"
+				},
+				"../../../../../../src/routes/app/projects/create/schema.ts": {
+					"filePath": "../../../../../../src/routes/app/projects/create/schema.ts",
+					"size": 227
+				},
+				"../../../../../../src/routes/app/projects/create/+page.svelte": {
+					"filePath": "../../../../../../src/routes/app/projects/create/+page.svelte",
+					"size": 3235
+				}
+			}
+		},
+		"_app/immutable/entry/app.42a95a88.js": {
+			"id": "_app/immutable/entry/app.42a95a88.js",
+			"isEntry": true,
+			"size": 1421247,
+			"contents": {
+				"../../../../../../node_modules/tslib/tslib.es6.mjs": {
+					"filePath": "../../../../../../node_modules/tslib/tslib.es6.mjs",
+					"size": 10355,
+					"packageName": "tslib"
+				},
+				"../../../../../../node_modules/@clerk/themes/dist/themes/src/createTheme.js": {
+					"filePath": "../../../../../../node_modules/@clerk/themes/dist/themes/src/createTheme.js",
+					"size": 220,
+					"packageName": "@clerk/dist"
+				},
+				"../../../../../../node_modules/@clerk/themes/dist/themes/src/themes/dark.js": {
+					"filePath": "../../../../../../node_modules/@clerk/themes/dist/themes/src/themes/dark.js",
+					"size": 622,
+					"packageName": "@clerk/dist"
+				},
+				"../../../../../../node_modules/@clerk/themes/dist/themes/src/themes/shadesOfPurple.js": {
+					"filePath": "../../../../../../node_modules/@clerk/themes/dist/themes/src/themes/shadesOfPurple.js",
+					"size": 426,
+					"packageName": "@clerk/dist"
+				},
+				"../../../../../../node_modules/@clerk/themes/dist/themes/src/themes/neobrutalism.js": {
+					"filePath": "../../../../../../node_modules/@clerk/themes/dist/themes/src/themes/neobrutalism.js",
+					"size": 1124,
+					"packageName": "@clerk/dist"
+				},
+				"../../../../../../node_modules/@clerk/themes/dist/themes/src/themes/index.js": {
+					"filePath": "../../../../../../node_modules/@clerk/themes/dist/themes/src/themes/index.js",
+					"size": 151,
+					"packageName": "@clerk/dist"
+				},
+				"../../../../../../node_modules/@clerk/themes/dist/themes/src/index.js": {
+					"filePath": "../../../../../../node_modules/@clerk/themes/dist/themes/src/index.js",
+					"size": 112,
+					"packageName": "@clerk/dist"
+				},
+				"../../../../../../node_modules/@clerk/clerk-js/dist/clerk.mjs": {
+					"filePath": "../../../../../../node_modules/@clerk/clerk-js/dist/clerk.mjs",
+					"size": 1400608,
+					"packageName": "@clerk/dist"
+				},
+				"../../../../../../node_modules/clerk-sveltekit/dist/client/initializeClerkClient.js": {
+					"filePath": "../../../../../../node_modules/clerk-sveltekit/dist/client/initializeClerkClient.js",
+					"size": 380,
+					"packageName": "clerk-sveltekit"
+				},
+				"../../../../../../node_modules/clerk-sveltekit/dist/client/index.js": {
+					"filePath": "../../../../../../node_modules/clerk-sveltekit/dist/client/index.js",
+					"size": 47,
+					"packageName": "clerk-sveltekit"
+				},
+				"../../../../../../src/hooks.client.ts": {
+					"filePath": "../../../../../../src/hooks.client.ts",
+					"size": 182
+				},
+				"../../../../../generated/client-optimized/matchers.js": {
+					"filePath": "../../../../../generated/client-optimized/matchers.js",
+					"size": 31
+				},
+				"../../../../../generated/root.svelte": {
+					"filePath": "../../../../../generated/root.svelte",
+					"size": 4075
+				},
+				"../../../../../generated/client-optimized/app.js": {
+					"filePath": "../../../../../generated/client-optimized/app.js",
+					"size": 1011
+				}
+			}
+		}
+	}
+}

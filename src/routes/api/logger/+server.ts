@@ -21,7 +21,7 @@ export async function POST(event: RequestEvent) {
 	const project = await db
 		.select()
 		.from(projects)
-		.where(eq(projects.id, projectId))
+		.where(eq(projects.id, projectId));
 
 	if (!project) {
 		return json({ success: false, error: "Project not found" });

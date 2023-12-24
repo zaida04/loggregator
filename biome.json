@@ -3,6 +3,9 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"files": {
+		"ignore": [".vercel/*", ".svelte-kit/*"]
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {

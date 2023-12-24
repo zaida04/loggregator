@@ -6,7 +6,6 @@ import { validation } from "./apimap";
 
 export const handle: Handle = sequence(
 	handleClerk(env.CLERK_SECRET_KEY!, {
-		debug: true,
 		protectedPaths: ["/app"],
 		signInUrl: "/sign-in",
 	}),

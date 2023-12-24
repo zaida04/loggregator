@@ -1,7 +1,7 @@
 <script lang="ts">
-	import '../index.css';
-	import { ModeWatcher } from 'mode-watcher';
+  import "../index.css";
+  import { ModeWatcher } from "mode-watcher";
 </script>
 
-<ModeWatcher defaultMode={'dark'} />
+<ModeWatcher defaultMode={"dark"} />
 <slot />
