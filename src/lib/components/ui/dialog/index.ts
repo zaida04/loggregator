@@ -3,6 +3,7 @@ import { Dialog as DialogPrimitive } from "bits-ui";
 const Root = DialogPrimitive.Root;
 const Trigger = DialogPrimitive.Trigger;
 
+import Close from "./dialog-close.svelte";
 import Content from "./dialog-content.svelte";
 import Description from "./dialog-description.svelte";
 import Footer from "./dialog-footer.svelte";
@@ -10,7 +11,6 @@ import Header from "./dialog-header.svelte";
 import Overlay from "./dialog-overlay.svelte";
 import Portal from "./dialog-portal.svelte";
 import Title from "./dialog-title.svelte";
-import Close from "./dialog-close.svelte";
 
 export {
 	Root,

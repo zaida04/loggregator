@@ -10,9 +10,8 @@
     "migrate:run": "tsx ./src/db/run-migrations.ts",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "biome lint --apply src",
-    "lint:fix": "biome lint src",
-    "format": "biome format --write .",
+    "lint": "biome check --apply .",
+    "lint:fix": "biome check .",
     "c:add": "shadcn-svelte add"
   },
   "devDependencies": {

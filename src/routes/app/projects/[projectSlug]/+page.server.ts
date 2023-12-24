@@ -1,12 +1,12 @@
 import { db } from "$db";
-import { lines, projects, type Project, type Line } from "$db/schema";
-import { eq } from "drizzle-orm";
+import { type Line, type Project, lines, projects } from "$db/schema";
 import {
-	error,
 	type Actions,
 	type RequestEvent,
+	error,
 	redirect,
 } from "@sveltejs/kit";
+import { eq } from "drizzle-orm";
 import type { PageServerLoad } from "./$types";
 
 export const load: PageServerLoad = async (event) => {

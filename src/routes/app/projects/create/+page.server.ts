@@ -1,11 +1,11 @@
-import type { Actions } from "./$types";
-import { fail, redirect } from "@sveltejs/kit";
-import { superValidate } from "sveltekit-superforms/server";
-import { formSchema } from "./schema";
 import { db } from "$db";
 import { projects } from "$db/schema";
-import { generateId } from "$lib/nanoid";
 import { generateJWT } from "$lib/jwt";
+import { generateId } from "$lib/nanoid";
+import { fail, redirect } from "@sveltejs/kit";
+import { superValidate } from "sveltekit-superforms/server";
+import type { Actions } from "./$types";
+import { formSchema } from "./schema";
 
 export async function load() {
 	return {
