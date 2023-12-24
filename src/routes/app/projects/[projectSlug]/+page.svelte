@@ -7,6 +7,8 @@
 	import { formatDate, formatLineDate } from "$lib/utils.js";
 	import { tick } from "svelte";
 	import type { PageData } from "./$types";
+	import { Dialog, DialogTrigger } from "$lib/components/ui/dialog";
+	import DialogShortcut from "$lib/components/ui/dialog/dialog-shortcut.svelte";
 
 	export let data: PageData;
 	let lines = data.lines;
@@ -85,11 +87,26 @@
 						Delete your project. This will immediately remove all
 						logs and resources allocated to your project.
 					</p>
-					<form method="POST" action="?/deleteProject">
-						<Button type="submit" variant="destructive">
-							Delete Project
-						</Button>
-					</form>
+					<Dialog>
+						<DialogTrigger>
+							<Button variant="destructive">
+								Delete Project
+							</Button>
+						</DialogTrigger>
+						<DialogShortcut
+							title="Delete Project"
+							description="Are you sure you want to delete this project? This action cannot be undone."
+							formaction={"?/deleteProject"}
+						>
+							<Button
+								type="submit"
+								variant="destructive"
+								class="mr-2"
+							>
+								Delete
+							</Button>
+						</DialogShortcut>
+					</Dialog>
 				</div>
 			</div>
 		</div>
