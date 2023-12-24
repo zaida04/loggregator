@@ -1,4 +1,4 @@
-import { tv, type VariantProps } from "tailwind-variants";
+import { type VariantProps, tv } from "tailwind-variants";
 
 export { default as Badge } from "./badge.svelte";
 export const badgeVariants = tv({
@@ -11,12 +11,12 @@ export const badgeVariants = tv({
 				"border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
 			destructive:
 				"border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
-			outline: "text-foreground"
-		}
+			outline: "text-foreground",
+		},
 	},
 	defaultVariants: {
-		variant: "default"
-	}
+		variant: "default",
+	},
 });
 
 export type Variant = VariantProps<typeof badgeVariants>["variant"];
