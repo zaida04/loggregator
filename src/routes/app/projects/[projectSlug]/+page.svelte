@@ -85,7 +85,11 @@
 						Delete your project. This will immediately remove all
 						logs and resources allocated to your project.
 					</p>
-					<Button variant="destructive">Delete Project</Button>
+					<form method="POST" action="?/deleteProject">
+						<Button type="submit" variant="destructive">
+							Delete Project
+						</Button>
+					</form>
 				</div>
 			</div>
 		</div>
