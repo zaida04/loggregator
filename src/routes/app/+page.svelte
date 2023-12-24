@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
 	import Box from '$lib/components/ui/box/box.svelte';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import DashNavbar from '$lib/components/reusable/DashNavbar/DashNavbar.svelte';
+	import type { PageData } from './$types';
+
+	let data: PageData;
 </script>
 
 <div class="flex flex-col min-h-screen overflow-y-scroll items-center gap-4">

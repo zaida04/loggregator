@@ -4,7 +4,7 @@ import { z } from 'zod';
 
 const map: Record<string, Record<string, z.ZodTypeAny>> = {
     '/api/projects': {
-        "POST": projectsValidator,
+        POST: projectsValidator,
     }
 };
 
