@@ -4,51 +4,27 @@
 	import Button from "$lib/components/ui/button/button.svelte";
 	import Alert from "$lib/components/ui/alert/alert.svelte";
 	import DashNavbar from "$lib/components/reusable/DashNavbar/DashNavbar.svelte";
-
-	const lines = ["This is log 1", "This is log 2"];
-
-	// function handleCopy(event: ClipboardEvent) {
-	// 	const selection = document.getSelection();
-	// 	let text = selection!.toString();
-	// 	text = text.replace(/>/g, '\n');
-	// 	event.clipboardData?.setData('text/plain', text);
-	// 	event.preventDefault();
-	// }
-	function formatDate(date: Date) {
-		const monthNames = [
-			"January",
-			"February",
-			"March",
-			"April",
-			"May",
-			"June",
-			"July",
-			"August",
-			"September",
-			"October",
-			"November",
-			"December",
-		];
-		const day = date.getDate();
-		const month = monthNames[date.getMonth()];
-		const year = date.getFullYear();
-
-		return `${month} ${day}, ${year}`;
-	}
-
-	function formatLineDate(date: Date) {
-		return new Intl.DateTimeFormat("en-US", {
-			year: "numeric",
-			month: "2-digit",
-			day: "2-digit",
-			hour: "2-digit",
-			minute: "2-digit",
-			hour12: true,
-		}).format(date);
-	}
+	import { formatDate, formatLineDate } from "$lib/utils.js";
+	import { tick } from "svelte";
 
 	export let data;
-	console.log(data);
+	let lines = data.lines;
+	let element: HTMLDivElement;
+
+	async function refreshLines() {
+		const res = await fetch(`/api/projects/${data.project.id}/lines`);
+		const json = await res.json();
+
+		json.lines.map((line) => {
+			line.createdAt = new Date(line.createdAt);
+		});
+		lines = json.lines;
+	}
+
+	$: if (lines && element)
+		tick().then(() =>
+			element.scroll({ top: element.scrollHeight, behavior: "smooth" })
+		);
 </script>
 
 <div class="flex flex-col items-center gap-4">
@@ -82,13 +58,14 @@
 				</div>
 			</div>
 
-			<Button>Refresh</Button>
+			<Button on:click={refreshLines}>Refresh</Button>
 		</div>
 
 		<div
-			class="mb-4 flex flex-col h-80 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+			bind:this={element}
+			class="mb-4 flex flex-col h-80 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm overflow-y-scroll placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
 		>
-			{#each data.lines as line}
+			{#each lines as line}
 				<div class="flex gap-2 text-gray-300">
 					<p class="text-sm select-none text-gray-500">
 						{formatLineDate(line.createdAt)}{" >"}

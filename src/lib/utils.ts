@@ -60,3 +60,36 @@ export const flyAndScale = (
 		easing: cubicOut,
 	};
 };
+
+export function formatDate(date: Date) {
+	const monthNames = [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December",
+	];
+	const day = date.getDate();
+	const month = monthNames[date.getMonth()];
+	const year = date.getFullYear();
+
+	return `${month} ${day}, ${year}`;
+}
+
+export function formatLineDate(date: Date) {
+	return new Intl.DateTimeFormat("en-US", {
+		year: "numeric",
+		month: "2-digit",
+		day: "2-digit",
+		hour: "2-digit",
+		minute: "2-digit",
+		hour12: true,
+	}).format(date);
+}
