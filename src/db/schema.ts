@@ -12,6 +12,7 @@ export const projects = pgTable("projects", {
 	createdAt,
 	updatedAt,
 });
+export type Project = typeof projects.$inferSelect;
 
 export const lines = pgTable("lines", {
 	id: id(),
@@ -19,3 +20,4 @@ export const lines = pgTable("lines", {
 	projectId: text("projectId").notNull(),
 	createdAt
 });
+export type Line = typeof lines.$inferSelect;

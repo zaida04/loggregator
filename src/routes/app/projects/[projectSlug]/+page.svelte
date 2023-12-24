@@ -6,8 +6,9 @@
 	import DashNavbar from "$lib/components/reusable/DashNavbar/DashNavbar.svelte";
 	import { formatDate, formatLineDate } from "$lib/utils.js";
 	import { tick } from "svelte";
+	import type { PageData } from "./$types";
 
-	export let data;
+	export let data: PageData;
 	let lines = data.lines;
 	let element: HTMLDivElement;
 
