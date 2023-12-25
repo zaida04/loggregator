@@ -90,6 +90,7 @@
         <Select
           selected={{ value: selectedDeployment }}
           onSelectedChange={handleDeploymentSelect}
+          disabled={sortedDeployments.length === 0}
         >
           <SelectTrigger class="w-[180px]">
             <SelectValue
