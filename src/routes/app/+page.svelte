@@ -38,9 +38,11 @@
         <h2 class="mb-2">{project.name}</h2>
         <div class="text-gray-400">
           <p class="text-sm pb-6">{project.line_count} logs collected</p>
-          <p class="text-xs">
-            Last updated {formatDate(project.last_line?.createdAt)}
-          </p>
+          {#if project.last_line}
+            <p class="text-sm">
+              Last log collected {formatDate(project.last_line?.createdAt)}
+            </p>
+          {/if}
         </div>
       </a>
     {/each}
