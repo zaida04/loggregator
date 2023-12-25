@@ -39,8 +39,8 @@
         <div class="text-gray-400">
           <p class="text-sm pb-6">{project.line_count} logs collected</p>
           {#if project.last_line}
-            <p class="text-sm">
-              Last log collected {formatDate(project.last_line?.createdAt)}
+            <p class="text-xs">
+              Last updated {formatDate(project.last_line?.createdAt)}
             </p>
           {/if}
         </div>
