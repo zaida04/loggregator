@@ -19,9 +19,9 @@
   export let data: PageData;
   $: sortedDeployments = sortDeployments(data.deployments);
   $: selectedDeployment = sortedDeployments[0] ?? null;
-  $: filteredLines = data.lines.filter(
-    (line) => line.deploymentId === selectedDeployment
-  );
+  $: filteredLines = selectedDeployment
+    ? data.lines.filter((line) => line.deploymentId === selectedDeployment)
+    : data.lines;
   let element: HTMLDivElement;
 
   async function refreshLines() {
@@ -95,6 +95,7 @@
             <SelectValue placeholder={selectedDeployment} />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value={null}>All</SelectItem>
             {#each sortedDeployments as deployment}
               <SelectItem value={deployment}>
                 {deployment}
