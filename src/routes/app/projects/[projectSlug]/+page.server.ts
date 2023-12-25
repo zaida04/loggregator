@@ -39,7 +39,7 @@ export const actions: Actions = {
 			});
 
 		await db.delete(lines).where(eq(lines.projectId, project.id));
-		await db.delete(projects).where(eq(projects.id, event.params.projectSlug!));
+		await db.delete(projects).where(eq(projects.id, project.id));
 
 		throw redirect(303, "/app");
 	},

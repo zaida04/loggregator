@@ -3,6 +3,7 @@
   import Button from "$lib/components/ui/button/button.svelte";
   import DashNavbar from "$lib/components/reusable/DashNavbar/DashNavbar.svelte";
   import type { PageData } from "./$types";
+  import { formatDate } from "$lib/utils";
 
   export let data: PageData;
 </script>
@@ -32,12 +33,14 @@
     {#each data.projects as project}
       <a
         href="/app/projects/{project.id}"
-        class="w-64 h-[150px] border-2 rounded-md p-6 shadow-primary-foreground shadow-md transition-all hover:border-b-4 hover:shadow-2xl hover:shadow-primary-foreground"
+        class="w-64 h-[150px] border-2 rounded-md px-6 py-5 shadow-primary-foreground shadow-md transition-all hover:border-b-4 hover:shadow-2xl hover:shadow-primary-foreground"
       >
         <h2 class="mb-2">{project.name}</h2>
         <div class="text-gray-400">
-          <p class="text-sm">X logs collected</p>
-          <p class="text-sm">Last log collected Today</p>
+          <p class="text-sm pb-6">{project.line_count} logs collected</p>
+          <p class="text-xs">
+            Last updated {formatDate(project.last_line?.createdAt)}
+          </p>
         </div>
       </a>
     {/each}
