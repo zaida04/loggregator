@@ -5,8 +5,9 @@ import { getLines } from "$lib/lines";
 import { getProject } from "$lib/projects";
 import { type Actions, error, redirect } from "@sveltejs/kit";
 import { eq } from "drizzle-orm";
+import type { RequestEvent } from "./$types";
 
-export async function load(event) {
+export async function load(event: RequestEvent) {
 	const project = await getProject(event.params.projectSlug!);
 	if (!project)
 		throw error(404, {
