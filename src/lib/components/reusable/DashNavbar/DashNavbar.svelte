@@ -6,8 +6,8 @@
   import { Button } from "$lib/components/ui/button";
 </script>
 
-<div class="w-4/5 flex justify-between items-center my-2">
-  <div class="w-4/5 flex justify-between items-center py-4">
+<div class="w-full flex justify-between items-center my-2">
+  <div class="flex justify-between items-center py-4">
     <div class="flex flex-row gap-4 items-center">
       <Logo href="/app" />
       {#if Object.keys($$slots).length}

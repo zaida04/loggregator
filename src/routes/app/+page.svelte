@@ -4,21 +4,21 @@
   import DashNavbar from "$lib/components/reusable/DashNavbar/DashNavbar.svelte";
   import type { PageData } from "./$types";
   import { formatDate } from "$lib/utils";
+  import DashLayout from "$lib/components/reusable/Layout/DashLayout.svelte";
 
   export let data: PageData;
 </script>
 
-<div class="flex flex-col min-h-screen items-center gap-4">
+<DashLayout>
   <DashNavbar />
-
-  <div class="w-4/5 mb-4 flex gap-8 items-end">
+  <div class="mb-4 flex gap-8 items-end">
     <h1 class="font-semibold">Your Projects</h1>
     <a href="/app/projects/create">
       <Button size="sm">Create Project</Button>
     </a>
   </div>
 
-  <div class="flex gap-8 w-4/5 flex-wrap">
+  <div class="flex gap-8 flex-wrap">
     <!-- <a
 			href="/app/projects/test-project"
 			class="w-64 border-2 rounded-md p-6 shadow-primary-foreground shadow-md transition-all hover:border-b-4 hover:shadow-2xl hover:shadow-primary-foreground"
@@ -66,4 +66,4 @@
       </a>
     {/if}
   </div>
-</div>
+</DashLayout>

@@ -15,6 +15,7 @@
   import SelectItem from "$lib/components/ui/select/select-item.svelte";
   import type { Line } from "$db/schema";
   import { sortDeployments } from "$lib/deployments";
+  import DashLayout from "$lib/components/reusable/Layout/DashLayout.svelte";
 
   export let data: PageData;
   $: sortedDeployments = sortDeployments(data.deployments);
@@ -55,12 +56,12 @@
     );
 </script>
 
-<div class="flex flex-col items-center gap-4">
+<DashLayout>
   <DashNavbar>
     <h1>{data.project.name}</h1>
   </DashNavbar>
 
-  <div class="w-4/5">
+  <div>
     <h1 class="font-normal mb-2">{data.project.name}</h1>
     <p class="text-gray-400 text-sm mb-10">
       Created {formatDate(data.project.createdAt)}
@@ -153,4 +154,4 @@
       </div>
     </div>
   </div>
-</div>
+</DashLayout>
