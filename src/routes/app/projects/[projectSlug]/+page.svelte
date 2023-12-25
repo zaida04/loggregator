@@ -92,7 +92,11 @@
           onSelectedChange={handleDeploymentSelect}
         >
           <SelectTrigger class="w-[180px]">
-            <SelectValue placeholder={selectedDeployment} />
+            <SelectValue
+              placeholder={selectedDeployment === null
+                ? "No Deployments"
+                : selectedDeployment}
+            />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value={null}>All</SelectItem>
