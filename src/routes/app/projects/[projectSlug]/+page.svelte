@@ -9,22 +9,38 @@
   import type { PageData } from "./$types";
   import { Dialog, DialogTrigger } from "$lib/components/ui/dialog";
   import DialogShortcut from "$lib/components/ui/dialog/dialog-shortcut.svelte";
+  import { Select, SelectValue } from "$lib/components/ui/select";
+  import SelectTrigger from "$lib/components/ui/select/select-trigger.svelte";
+  import SelectContent from "$lib/components/ui/select/select-content.svelte";
+  import SelectItem from "$lib/components/ui/select/select-item.svelte";
+  import type { Line } from "$db/schema";
+  import { sortDeployments } from "$lib/deployments";
 
   export let data: PageData;
-  let lines = data.lines;
+  $: sortedDeployments = sortDeployments(data.deployments);
   let element: HTMLDivElement;
 
   async function refreshLines() {
     const res = await fetch(`/api/projects/${data.project.id}/lines`);
-    const json = await res.json();
+    const json = (await res.json()) as {
+      lines: Line[];
+      deployments: Record<string, Date>;
+    };
 
     json.lines.map((line) => {
       line.createdAt = new Date(line.createdAt);
     });
-    lines = json.lines;
+    json.deployments = Object.fromEntries(
+      Object.entries(json.deployments).map(([key, value]) => [
+        key,
+        new Date(value),
+      ])
+    );
+    data.lines = json.lines;
+    data.deployments = json.deployments;
   }
 
-  $: if (lines && element)
+  $: if (data && element)
     tick().then(() =>
       element.scroll({ top: element.scrollHeight, behavior: "smooth" })
     );
@@ -61,14 +77,28 @@
         </div>
       </div>
 
-      <Button on:click={refreshLines}>Refresh</Button>
+      <div class="flex flex-row gap-4">
+        <Select>
+          <SelectTrigger class="w-[180px]">
+            <SelectValue placeholder="Deployment" />
+          </SelectTrigger>
+          <SelectContent>
+            {#each sortedDeployments as deployment}
+              <SelectItem value={deployment}>
+                {deployment}
+              </SelectItem>
+            {/each}
+          </SelectContent>
+        </Select>
+        <Button on:click={refreshLines}>Refresh</Button>
+      </div>
     </div>
 
     <div
       bind:this={element}
-      class="mb-4 flex flex-col h-80 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm overflow-y-scroll placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+      class="mb-12 flex flex-col h-80 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm overflow-y-scroll placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
     >
-      {#each lines as line}
+      {#each data.lines as line}
         <div class="flex gap-2 text-gray-300">
           <p class="text-sm select-none text-gray-500">
             {formatLineDate(line.createdAt)}{" >"}

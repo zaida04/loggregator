@@ -20,6 +20,7 @@ export const lines = pgTable("lines", {
 	id: id(),
 	content: text("content"),
 	projectId: text("projectId").notNull(),
+	deploymentId: text("deploymentId").default("unknown"),
 	createdAt,
 });
 export type Line = typeof lines.$inferSelect;

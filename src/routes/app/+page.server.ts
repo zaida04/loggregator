@@ -27,7 +27,6 @@ export async function load() {
 			last_line: line_info?.last_line ?? null,
 		};
 	});
-	console.log(condensed_projects);
 
 	return {
 		projects: condensed_projects,

@@ -1,31 +1,23 @@
 import { db } from "$db";
 import { type Line, type Project, lines, projects } from "$db/schema";
-import {
-	type Actions,
-	type RequestEvent,
-	error,
-	redirect,
-} from "@sveltejs/kit";
+import { type Actions, error, redirect } from "@sveltejs/kit";
 import { eq } from "drizzle-orm";
-import type { PageServerLoad } from "./$types";
+import { accumulateDeployments } from "$lib/deployments";
+import { getLines } from "$lib/lines";
+import { getProject } from "$lib/projects";
 
-export const load: PageServerLoad = async (event) => {
-	const [project]: Project[] = await db
-		.select()
-		.from(projects)
-		.where(eq(projects.id, event.params.projectSlug!));
+export async function load(event) {
+	const project = await getProject(event.params.projectSlug!);
 	if (!project)
-		return error(404, {
+		throw error(404, {
 			message: "Not found",
 		});
 
-	const fetched_lines: Line[] = await db
-		.select()
-		.from(lines)
-		.where(eq(lines.projectId, project.id));
+	const fetched_lines: Line[] = await getLines(project.id);
+	const deployments = await accumulateDeployments(fetched_lines);
 
-	return { project, lines: fetched_lines };
-};
+	return { project, lines: fetched_lines, deployments };
+}
 
 export const actions: Actions = {
 	deleteProject: async (event) => {

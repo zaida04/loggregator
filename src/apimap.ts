@@ -21,8 +21,7 @@ export const validation: Handle = async ({ event, resolve }) => {
 				return json(
 					{
 						error: {
-							message:
-								"You are missing a JSON payload. Please attach one with your request.",
+							message: "Please attach a valid JSON payload with your request.",
 							details: [],
 						},
 					},

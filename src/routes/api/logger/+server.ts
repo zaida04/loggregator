@@ -30,6 +30,7 @@ export async function POST(event: RequestEvent) {
 	await db.insert(lines).values({
 		id: generateId(),
 		content: data.content,
+		deploymentId: data.deploymentId,
 		projectId,
 	});
 
@@ -38,4 +39,5 @@ export async function POST(event: RequestEvent) {
 
 export const _validator = z.object({
 	content: z.string(),
+	deploymentId: z.string().optional(),
 });

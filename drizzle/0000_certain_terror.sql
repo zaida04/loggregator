@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS "lines" (
 	"id" text PRIMARY KEY NOT NULL,
 	"content" text,
 	"projectId" text NOT NULL,
+	"deploymentId" text DEFAULT 'unknown',
 	"createdAt" timestamp NOT NULL
 );
 --> statement-breakpoint
