@@ -18,6 +18,10 @@
 
   export let data: PageData;
   $: sortedDeployments = sortDeployments(data.deployments);
+  $: selectedDeployment = sortedDeployments[0] ?? null;
+  $: filteredLines = data.lines.filter(
+    (line) => line.deploymentId === selectedDeployment
+  );
   let element: HTMLDivElement;
 
   async function refreshLines() {
@@ -38,6 +42,11 @@
     );
     data.lines = json.lines;
     data.deployments = json.deployments;
+  }
+
+  function handleDeploymentSelect(option: unknown) {
+    if (!option) return;
+    selectedDeployment = (option as { value: string }).value;
   }
 
   $: if (data && element)
@@ -78,9 +87,12 @@
       </div>
 
       <div class="flex flex-row gap-4">
-        <Select>
+        <Select
+          selected={{ value: selectedDeployment }}
+          onSelectedChange={handleDeploymentSelect}
+        >
           <SelectTrigger class="w-[180px]">
-            <SelectValue placeholder="Deployment" />
+            <SelectValue placeholder={selectedDeployment} />
           </SelectTrigger>
           <SelectContent>
             {#each sortedDeployments as deployment}
@@ -98,7 +110,7 @@
       bind:this={element}
       class="mb-12 flex flex-col h-80 w-full rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm overflow-y-scroll placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
     >
-      {#each data.lines as line}
+      {#each filteredLines as line}
         <div class="flex gap-2 text-gray-300">
           <p class="text-sm select-none text-gray-500">
             {formatLineDate(line.createdAt)}{" >"}
