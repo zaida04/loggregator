@@ -1,10 +1,10 @@
 import { db } from "$db";
 import { type Line, type Project, lines, projects } from "$db/schema";
-import { type Actions, error, redirect } from "@sveltejs/kit";
-import { eq } from "drizzle-orm";
 import { accumulateDeployments } from "$lib/deployments";
 import { getLines } from "$lib/lines";
 import { getProject } from "$lib/projects";
+import { type Actions, error, redirect } from "@sveltejs/kit";
+import { eq } from "drizzle-orm";
 
 export async function load(event) {
 	const project = await getProject(event.params.projectSlug!);

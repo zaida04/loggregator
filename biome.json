@@ -4,7 +4,7 @@
 		"enabled": true
 	},
 	"files": {
-		"ignore": [".vercel/*", ".svelte-kit/*"]
+		"ignore": [".vercel/*", ".svelte-kit/*", "drizzle/*"]
 	},
 	"linter": {
 		"enabled": true,

@@ -1,6 +1,6 @@
 import { accumulateDeployments } from "$lib/deployments";
 import { getLines } from "$lib/lines";
-import { json, type RequestEvent } from "@sveltejs/kit";
+import { type RequestEvent, json } from "@sveltejs/kit";
 
 export async function GET(event: RequestEvent) {
 	const fetched_lines = await getLines(event.params.projectId!);
