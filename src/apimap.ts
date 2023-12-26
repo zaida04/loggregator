@@ -18,6 +18,7 @@ export const validation: Handle = async ({ event, resolve }) => {
 			try {
 				body = await req.json();
 			} catch (e) {
+				console.log("incoming request body", await req.text());
 				return json(
 					{
 						error: {

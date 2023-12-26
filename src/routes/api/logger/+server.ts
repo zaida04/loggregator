@@ -17,7 +17,14 @@ export async function POST(event: RequestEvent) {
 	if (type !== "Bearer") {
 		return json({ success: false, error: "Invalid Authorization type" });
 	}
-	const { id: projectId } = await decodeJWT<{ id: string }>(token);
+
+	let projectId: string;
+	try {
+		projectId = (await decodeJWT<{ id: string }>(token)).id;
+	} catch (e) {
+		return json({ success: false, error: "Invalid auth header" });
+	}
+
 	const project = await db
 		.select()
 		.from(projects)
