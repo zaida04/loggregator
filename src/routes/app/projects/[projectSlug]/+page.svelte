@@ -16,6 +16,7 @@
   import type { Line } from "$db/schema";
   import { sortDeployments } from "$lib/deployments";
   import DashLayout from "$lib/components/reusable/Layout/DashLayout.svelte";
+  import Tutorial from "$lib/components/docs/Tutorial.svelte";
 
   export let data: PageData;
   $: sortedDeployments = sortDeployments(data.deployments);
@@ -66,6 +67,10 @@
     <p class="text-gray-400 text-sm mb-10">
       Created {formatDate(data.project.createdAt)}
     </p>
+
+    {#if data.lines.length === 0}
+      <Tutorial />
+    {/if}
 
     <div class="mb-4 flex justify-between gap-2 items-end">
       <div class="w-1/2">

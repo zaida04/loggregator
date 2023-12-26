@@ -28,6 +28,6 @@ export const actions: Actions = {
 			ownerId: "test",
 		});
 
-		throw redirect(303, `/app/projects/${new_id}/setup`);
+		throw redirect(303, `/app/projects/${new_id}`);
 	},
 };

@@ -1,5 +1,6 @@
 <script lang="ts">
   import DashNavbar from "$lib/components/reusable/DashNavbar/DashNavbar.svelte";
+  import DashLayout from "$lib/components/reusable/Layout/DashLayout.svelte";
   import * as Form from "$lib/components/ui/form";
   import type { PageData } from "./$types";
   import { formSchema } from "./schema";
@@ -7,7 +8,7 @@
   export let data: PageData;
 </script>
 
-<div class="flex flex-col items-center gap-4">
+<DashLayout>
   <DashNavbar>
     <h1>Create New Project</h1>
   </DashNavbar>
@@ -25,4 +26,4 @@
       <Form.Button class="mt-4">Submit</Form.Button>
     </Form.Root>
   </div>
-</div>
+</DashLayout>
