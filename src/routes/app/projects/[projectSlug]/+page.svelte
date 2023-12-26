@@ -105,7 +105,7 @@
         </div>
       </div>
 
-      <div class="w-full flex flex-row gap-4">
+      <div class="w-full md:w-fit flex flex-row gap-4">
         <Select
           selected={{ value: selectedDeployment }}
           onSelectedChange={handleDeploymentSelect}
