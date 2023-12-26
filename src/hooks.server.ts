@@ -1,13 +1,7 @@
-import { env } from "$env/dynamic/private";
+import { auth } from "$lib/server/auth";
 import type { Handle } from "@sveltejs/kit";
-import { sequence } from "@sveltejs/kit/hooks";
-import { handleClerk } from "clerk-sveltekit/server";
-import { validation } from "./apimap";
 
-export const handle: Handle = sequence(
-	handleClerk(env.CLERK_SECRET_KEY!, {
-		protectedPaths: ["/app"],
-		signInUrl: "/sign-in",
-	}),
-	validation,
-);
+export const handle: Handle = async ({ event, resolve }) => {
+	event.locals.auth = auth.handleRequest(event);
+	return await resolve(event);
+};

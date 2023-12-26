@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp } from "drizzle-orm/pg-core";
+import { bigint, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
 const id = (name = "id") => text(name).primaryKey();
 const createdAt = timestamp("createdAt")
@@ -24,3 +24,23 @@ export const lines = pgTable("lines", {
 	createdAt,
 });
 export type Line = typeof lines.$inferSelect;
+
+export const user = pgTable("users", {
+	id: id(),
+});
+export type User = typeof user.$inferSelect;
+
+export const session = pgTable("sessions", {
+	id: id(),
+	userId: text("userId").notNull(),
+	activeExpires: bigint("activeExpires", { mode: "bigint" }).notNull(),
+	idleExpires: bigint("idleExpires", { mode: "bigint" }).notNull(),
+});
+export type Session = typeof session.$inferSelect;
+
+export const key = pgTable("keys", {
+	id: id(),
+	hashedPassword: text("hashedPassword"),
+	userId: text("userId").notNull(),
+});
+export type Key = typeof key.$inferSelect;
