@@ -21,6 +21,7 @@
 
   export let data: PageData;
   $token = data.project.token;
+  $hide = data.lines.length > 0;
   $: sortedDeployments = sortDeployments(data.deployments);
   $: selectedDeployment = sortedDeployments[0] ?? null;
   $: filteredLines = selectedDeployment
@@ -70,7 +71,7 @@
       Created {formatDate(data.project.createdAt)}
     </p>
 
-    {#if !$hide && data.lines.length === 0}
+    {#if !$hide}
       <Tutorial />
     {:else}
       <Button
