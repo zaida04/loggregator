@@ -25,10 +25,7 @@ export async function POST(event: RequestEvent) {
 		return json({ success: false, error: "Invalid auth header" });
 	}
 
-	const project = await db
-		.select()
-		.from(projects)
-		.where(eq(projects.id, projectId));
+	const project = await db.select().from(projects).where(eq(projects.id, projectId));
 
 	if (!project) {
 		return json({ success: false, error: "Project not found" });

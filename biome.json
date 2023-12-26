@@ -6,6 +6,10 @@
 	"files": {
 		"ignore": [".vercel/*", ".svelte-kit/*", "drizzle/*"]
 	},
+	"formatter": {
+		"enabled": true,
+		"lineWidth": 150
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {

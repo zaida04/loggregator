@@ -35,9 +35,9 @@
             </AccordionItem>
 
             <AccordionItem value="manual-http">
-                <AccordionTrigger
-                    >Manually sending logs over HTTP</AccordionTrigger
-                >
+                <AccordionTrigger>
+                    Manually sending logs over HTTP
+                </AccordionTrigger>
                 <AccordionContent>
                     <Manual />
                 </AccordionContent>

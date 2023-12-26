@@ -22,10 +22,7 @@ export async function load(event: RequestEvent) {
 
 export const actions: Actions = {
 	deleteProject: async (event) => {
-		const [project]: Project[] = await db
-			.select()
-			.from(projects)
-			.where(eq(projects.id, event.params.projectSlug!));
+		const [project]: Project[] = await db.select().from(projects).where(eq(projects.id, event.params.projectSlug!));
 		if (!project)
 			return error(404, {
 				message: "Not found",

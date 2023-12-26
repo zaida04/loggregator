@@ -16,8 +16,6 @@ export async function accumulateDeployments(lines: Line[]) {
 }
 
 export function sortDeployments(deployments: Deployment) {
-	return Object.keys(deployments).toSorted(
-		(a, b) => deployments[b].getTime() - deployments[a].getTime(),
-	);
+	return Object.keys(deployments).toSorted((a, b) => deployments[b].getTime() - deployments[a].getTime());
 }
 export type Deployment = Record<string, Date>;

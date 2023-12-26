@@ -93,4 +93,7 @@
   p {
     @apply text-lg md:text-base;
   }
+  ul {
+    @apply list-disc list-inside text-lg md:text-base;
+  }
 }

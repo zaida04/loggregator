@@ -8,7 +8,7 @@
 	let className: $$Props["class"] = undefined;
 	export let transition: $$Props["transition"] = slide;
 	export let transitionConfig: $$Props["transitionConfig"] = {
-		duration: 200
+		duration: 200,
 	};
 
 	export { className as class };
@@ -20,7 +20,7 @@
 	{transitionConfig}
 	{...$$restProps}
 >
-	<div class="pb-4 pt-0">
+	<div class="pb-4 pt-0 px-8">
 		<slot />
 	</div>
 </AccordionPrimitive.Content>

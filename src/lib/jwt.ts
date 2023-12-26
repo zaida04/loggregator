@@ -9,9 +9,7 @@ export async function generateJWT(id: string) {
 	return gen.sign(secret);
 }
 
-export async function decodeJWT<Payload extends Record<string, string>>(
-	token: string,
-) {
+export async function decodeJWT<Payload extends Record<string, string>>(token: string) {
 	const { payload } = await jwtVerify(token, secret);
 	return payload as Payload & { iat: number };
 }
