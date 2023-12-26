@@ -12,7 +12,7 @@
 <DashLayout>
   <DashNavbar />
   <div class="mb-4 flex gap-8 items-end">
-    <h1 class="font-semibold">Your Projects</h1>
+    <h1 class="font-semibold text-3xl">Your Projects</h1>
     <a href="/app/projects/create">
       <Button size="sm">Create Project</Button>
     </a>
@@ -33,7 +33,7 @@
     {#each data.projects as project}
       <a
         href="/app/projects/{project.id}"
-        class="w-64 h-[150px] border-2 rounded-md px-6 py-5 shadow-primary-foreground shadow-md transition-all hover:border-b-4 hover:shadow-2xl hover:shadow-primary-foreground"
+        class="md:w-64 w-full h-[150px] border-2 rounded-md px-6 py-5 shadow-primary-foreground shadow-md transition-all hover:border-b-4 hover:shadow-2xl hover:shadow-primary-foreground"
       >
         <h2 class="mb-2">{project.name}</h2>
         <div class="text-gray-400">

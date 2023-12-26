@@ -27,7 +27,7 @@
         </Button>
     </div>
 
-    <div class="p-4">
+    <div class="md:p-4">
         <h2>Installation Options</h2>
         <Accordion>
             <AccordionItem value="adapter">

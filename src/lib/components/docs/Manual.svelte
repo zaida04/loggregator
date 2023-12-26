@@ -10,7 +10,7 @@
     example of a valid HTTP request to send a log over to Loggregator:
 </p>
 
-<pre>
+<pre class="overflow-x-auto mb-2">
     <code>
 {`curl -X POST "https://loggregator.co/api/logger" \\
     -H "Content-Type: application/json" \\

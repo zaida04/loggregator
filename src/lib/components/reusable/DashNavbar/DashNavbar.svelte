@@ -10,15 +10,19 @@
   <div class="flex justify-between items-center py-4">
     <div class="flex flex-row gap-4 items-center">
       <Logo href="/app" />
-      {#if Object.keys($$slots).length}
-        <p>•</p>
-        <slot />
-      {/if}
+      <div class="hidden md:flex flex-row gap-4">
+        {#if Object.keys($$slots).length}
+          <p>•</p>
+          <slot />
+        {/if}
+      </div>
     </div>
   </div>
 
   <div class="flex items-center gap-4">
-    <ModeSwitcher />
+    <div class="hidden md:block">
+      <ModeSwitcher />
+    </div>
     <a href="/">
       <Button>Home</Button>
     </a>

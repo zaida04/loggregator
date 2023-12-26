@@ -10,5 +10,7 @@
 </script>
 
 <a {href} on:click={handleClick}>
-  <h1 class="hover:underline underline-offset-2">Loggregator</h1>
+  <h1 class="hover:underline underline-offset-2 text-2xl md:text-3xl">
+    Loggregator
+  </h1>
 </a>

@@ -85,8 +85,8 @@
       </Button>
     {/if}
 
-    <div class="mb-4 flex justify-between gap-2 items-end">
-      <div class="w-1/2">
+    <div class="mb-4 flex flex-col md:flex-row justify-between gap-2 items-end">
+      <div class="w-full md:w-1/2">
         <Label>Your Token</Label>
         <div class="flex flex-row gap-2">
           <Input
@@ -105,13 +105,13 @@
         </div>
       </div>
 
-      <div class="flex flex-row gap-4">
+      <div class="w-full flex flex-row gap-4">
         <Select
           selected={{ value: selectedDeployment }}
           onSelectedChange={handleDeploymentSelect}
           disabled={sortedDeployments.length === 0}
         >
-          <SelectTrigger class="w-[180px]">
+          <SelectTrigger class="w-full md:w-[180px]">
             <SelectValue
               placeholder={selectedDeployment === null
                 ? "No Deployments"
