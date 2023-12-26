@@ -72,8 +72,7 @@
 
     {#if !$hide && data.lines.length === 0}
       <Tutorial />
-    {/if}
-    {#if $hide}
+    {:else}
       <Button
         variant="secondary"
         class="mb-8"
