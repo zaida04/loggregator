@@ -10,7 +10,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 		return new Response("", {
 			status: 302,
 			headers: {
-				location: "/sign-in",
+				location: "/login",
 			},
 		});
 	}
