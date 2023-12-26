@@ -11,6 +11,25 @@
   import { MagnifyingGlass } from "radix-icons-svelte";
 </script>
 
+<svelte:head>
+  <title>Loggregator | Logging made easy.</title>
+  <meta
+    name="description"
+    content="Loggregator is a simple, easy-to-use online log aggregation service that allows you to store, view, and search your logs."
+  />
+  <meta
+    name="keywords"
+    content="loggregator, logging, logs, log, aggregation, online, service, store, view, search"
+  />
+  <meta property="og:title" content="Loggregator | Logging made easy." />
+  <meta
+    property="og:description"
+    content="Loggregator is a simple, easy-to-use online log aggregation service that allows you to store, view, and search your logs."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://loggregator.co/" />
+</svelte:head>
+
 <Navbar />
 <Hero>
   <div class="flex flex-col gap-6 items-center text-center mx-4">
