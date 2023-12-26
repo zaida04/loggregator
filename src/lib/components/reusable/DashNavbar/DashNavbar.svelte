@@ -3,7 +3,6 @@
   import ModeSwitcher from "../ModeSwitcher.svelte";
   import { Button } from "$lib/components/ui/button";
   import SignedIn from "../SignedIn.svelte";
-  import { page } from "$app/stores";
 </script>
 
 <div class="w-full flex justify-between items-center my-2">
@@ -26,8 +25,10 @@
     <a href="/">
       <Button>Home</Button>
     </a>
-    <SignedIn data={$page.data}>
-      <p>test</p>
+    <SignedIn>
+      <form method="POST" action="/logout">
+        <Button type="submit">Logout</Button>
+      </form>
       <!-- <div class="flex flex-row gap-4 items-center">
         <div class="bg-accent rounded-full border-primary-foreground">
           <UserButton

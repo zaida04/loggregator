@@ -6,7 +6,6 @@
   import Separator from "$lib/components/ui/separator/separator.svelte";
   import Logo from "../Logo.svelte";
   import SignedIn from "../SignedIn.svelte";
-  import { page } from "$app/stores";
   import SignedOut from "../SignedOut.svelte";
 
   let showMobileNavbar: boolean;
@@ -43,12 +42,12 @@
 
     <div class="flex flex-row items-center gap-4">
       <ModeSwitcher />
-      <SignedIn data={$page.data}>
+      <SignedIn>
         <a href="/app">
           <Button>Go to Dashboard</Button>
         </a>
       </SignedIn>
-      <SignedOut data={$page.data}>
+      <SignedOut>
         <a href="/app"><Button>Log In</Button></a>
       </SignedOut>
     </div>

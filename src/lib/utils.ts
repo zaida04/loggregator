@@ -78,3 +78,13 @@ export async function getUser(event: RequestEvent<{}, string>) {
 	const session = await event.locals.auth.validate();
 	return session?.user?.userId ?? null;
 }
+
+// biome-ignore lint/complexity/noBannedTypes: <explanation>
+export async function withUser<T>(event: RequestEvent<{}, string>, payload: T): Promise<T & { userId: string }> {
+	const userId = await getUser(event);
+
+	return {
+		userId,
+		...payload,
+	};
+}
