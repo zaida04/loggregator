@@ -11,9 +11,9 @@
 
 <pre>
     <code>
-        {`curl -X POST "https://loggregator.co/api/logger" \\
-            -H "Content-Type: application/json" \\
-            -H "Authorization: Bearer ${$token}" \\
-            -d '{"content": "This is a valid log line"}'`}
+{`curl -X POST "https://loggregator.co/api/logger" \\
+    -H "Content-Type: application/json" \\
+    -H "Authorization: Bearer ${$token}" \\
+    -d '{"content": "This is a valid log line"}'`}
     </code>
 </pre>
