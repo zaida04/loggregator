@@ -5,10 +5,10 @@
         AccordionItem,
         AccordionTrigger,
     } from "$lib/components/ui/accordion";
-    import { page } from "$app/stores";
     import Adapter from "$lib/components/docs/Adapter.svelte";
     import Manual from "$lib/components/docs/Manual.svelte";
     import { Button } from "$lib/components/ui/button";
+    import { hide } from "$lib/store";
 </script>
 
 <div class="flex flex-col gap-4 mb-8 border p-8 rounded-xl">
@@ -17,9 +17,14 @@
             Welcome to loggregator! Let's finish setting up your project by
             sending over your first log!
         </p>
-        <a href={`/app/projects/${$page.params.projectSlug}`}>
-            <Button size="sm">Skip this tutorial</Button>
-        </a>
+        <Button
+            size="sm"
+            on:click={() => {
+                $hide = true;
+            }}
+        >
+            Skip this tutorial
+        </Button>
     </div>
 
     <div class="p-4">

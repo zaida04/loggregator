@@ -17,8 +17,10 @@
   import { sortDeployments } from "$lib/deployments";
   import DashLayout from "$lib/components/reusable/Layout/DashLayout.svelte";
   import Tutorial from "$lib/components/docs/Tutorial.svelte";
+  import { hide, token } from "$lib/store";
 
   export let data: PageData;
+  $token = data.project.token;
   $: sortedDeployments = sortDeployments(data.deployments);
   $: selectedDeployment = sortedDeployments[0] ?? null;
   $: filteredLines = selectedDeployment
@@ -68,8 +70,20 @@
       Created {formatDate(data.project.createdAt)}
     </p>
 
-    {#if data.lines.length === 0}
+    {#if !$hide && data.lines.length === 0}
       <Tutorial />
+    {/if}
+    {#if $hide}
+      <Button
+        variant="secondary"
+        class="mb-8"
+        size="sm"
+        on:click={() => {
+          $hide = false;
+        }}
+      >
+        Show tutorial
+      </Button>
     {/if}
 
     <div class="mb-4 flex justify-between gap-2 items-end">
