@@ -21,7 +21,7 @@ export const actions: Actions = {
 			return fail(400, { form });
 		}
 
-		const userId = getUser(event);
+		const userId = await getUser(event);
 		const newId = generateId();
 		await db.insert(projects).values({
 			id: newId,

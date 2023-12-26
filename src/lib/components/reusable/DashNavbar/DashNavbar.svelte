@@ -1,9 +1,9 @@
 <script>
-  import SignedIn from "clerk-sveltekit/client/SignedIn.svelte";
-  import UserButton from "clerk-sveltekit/client/UserButton.svelte";
   import Logo from "../Logo.svelte";
   import ModeSwitcher from "../ModeSwitcher.svelte";
   import { Button } from "$lib/components/ui/button";
+  import SignedIn from "../SignedIn.svelte";
+  import { page } from "$app/stores";
 </script>
 
 <div class="w-full flex justify-between items-center my-2">
@@ -26,8 +26,9 @@
     <a href="/">
       <Button>Home</Button>
     </a>
-    <SignedIn>
-      <div class="flex flex-row gap-4 items-center">
+    <SignedIn data={$page.data}>
+      <p>test</p>
+      <!-- <div class="flex flex-row gap-4 items-center">
         <div class="bg-accent rounded-full border-primary-foreground">
           <UserButton
             appearance={{
@@ -38,7 +39,7 @@
             afterSignOutUrl="/"
           />
         </div>
-      </div>
+      </div> -->
     </SignedIn>
   </div>
 </div>

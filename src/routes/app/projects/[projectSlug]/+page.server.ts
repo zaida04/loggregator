@@ -9,7 +9,7 @@ import type { RequestEvent } from "./$types";
 import { getUser } from "$lib/utils";
 
 export async function load(event: RequestEvent) {
-	const userId = getUser(event);
+	const userId = await getUser(event);
 	const project = await getProject(userId, event.params.projectSlug!);
 	if (!project)
 		throw error(404, {

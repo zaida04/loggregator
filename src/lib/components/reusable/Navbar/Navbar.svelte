@@ -5,8 +5,9 @@
   import NavbarItem from "./NavbarItem.svelte";
   import Separator from "$lib/components/ui/separator/separator.svelte";
   import Logo from "../Logo.svelte";
-  import SignedIn from "clerk-sveltekit/client/SignedIn.svelte";
-  import SignedOut from "clerk-sveltekit/client/SignedOut.svelte";
+  import SignedIn from "../SignedIn.svelte";
+  import { page } from "$app/stores";
+  import SignedOut from "../SignedOut.svelte";
 
   let showMobileNavbar: boolean;
   let navbarClosing: boolean = false;
@@ -42,12 +43,12 @@
 
     <div class="flex flex-row items-center gap-4">
       <ModeSwitcher />
-      <SignedIn>
+      <SignedIn data={$page.data}>
         <a href="/app">
           <Button>Go to Dashboard</Button>
         </a>
       </SignedIn>
-      <SignedOut>
+      <SignedOut data={$page.data}>
         <a href="/app"><Button>Log In</Button></a>
       </SignedOut>
     </div>

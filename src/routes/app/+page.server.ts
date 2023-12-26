@@ -9,6 +9,7 @@ export async function load(event: RequestEvent) {
 	const userId = await getUser(event);
 	if (!userId) throw redirect(302, "/sign-in");
 
+	console.log(userId);
 	const fetched_projects = await db.select().from(projects).where(eq(projects.ownerId, userId));
 	const line_infos = await Promise.all(
 		fetched_projects.map((project) =>
