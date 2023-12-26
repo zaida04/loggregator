@@ -1,2 +1,3 @@
-<h1>Sign in</h1>
-<a href="/login/github">Sign in with GitHub</a>
+<div class="w-full h-screen flex justify-center items-center">
+    <h1>Redirecting you to GitHub...</h1>
+</div>
