@@ -74,6 +74,7 @@ export function formatLineDate(date: Date) {
 }
 
 // biome-ignore lint/complexity/noBannedTypes: <explanation>
-export function getUser(event: RequestEvent<{}, string>) {
-	return event.locals.session.userId;
+export async function getUser(event: RequestEvent<{}, string>) {
+	const session = await event.locals.auth.validate();
+	return session?.user?.userId ?? null;
 }
