@@ -61,8 +61,9 @@
   >
     <Logo />
     <div
+      aria-label="Toggle Navbar"
       role="button"
-      tabindex={1}
+      tabindex={0}
       on:click={toggleNav}
       on:keypress={toggleNav}
     >
