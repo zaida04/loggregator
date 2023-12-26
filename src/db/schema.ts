@@ -1,3 +1,4 @@
+import { relations } from "drizzle-orm";
 import { bigint, pgTable, text, timestamp } from "drizzle-orm/pg-core";
 
 const id = (name = "id") => text(name).primaryKey();
@@ -25,22 +26,33 @@ export const lines = pgTable("lines", {
 });
 export type Line = typeof lines.$inferSelect;
 
-export const user = pgTable("users", {
+export const users = pgTable("users", {
 	id: id(),
+	username: text("username").notNull(),
 });
-export type User = typeof user.$inferSelect;
+export const usersRelations = relations(users, ({ many }) => ({
+	auth_session: many(sessions),
+	key: many(keys),
+}));
+export type User = typeof users.$inferSelect;
 
-export const session = pgTable("sessions", {
+export const sessions = pgTable("sessions", {
 	id: id(),
-	userId: text("userId").notNull(),
-	activeExpires: bigint("activeExpires", { mode: "bigint" }).notNull(),
-	idleExpires: bigint("idleExpires", { mode: "bigint" }).notNull(),
+	userId: text("user_id").notNull(),
+	activeExpires: bigint("active_expires", { mode: "bigint" }).notNull(),
+	idleExpires: bigint("idle_expires", { mode: "bigint" }).notNull(),
 });
-export type Session = typeof session.$inferSelect;
+export const sessionsRelations = relations(sessions, ({ one }) => ({
+	user: one(users),
+}));
+export type Session = typeof sessions.$inferSelect;
 
-export const key = pgTable("keys", {
+export const keys = pgTable("keys", {
 	id: id(),
-	hashedPassword: text("hashedPassword"),
-	userId: text("userId").notNull(),
+	hashedPassword: text("hashed_password"),
+	userId: text("user_id").notNull(),
 });
-export type Key = typeof key.$inferSelect;
+export const keysRelations = relations(keys, ({ one }) => ({
+	user: one(users),
+}));
+export type Key = typeof keys.$inferSelect;
