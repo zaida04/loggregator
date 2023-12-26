@@ -6,6 +6,7 @@ import { fail, redirect } from "@sveltejs/kit";
 import { superValidate } from "sveltekit-superforms/server";
 import type { Actions } from "./$types";
 import { formSchema } from "./schema";
+import { getUser } from "$lib/utils";
 
 export async function load() {
 	return {
@@ -20,14 +21,15 @@ export const actions: Actions = {
 			return fail(400, { form });
 		}
 
-		const new_id = generateId();
+		const userId = getUser(event);
+		const newId = generateId();
 		await db.insert(projects).values({
-			id: new_id,
+			id: newId,
 			name: form.data.name,
-			token: await generateJWT(new_id),
-			ownerId: "test",
+			token: await generateJWT(newId),
+			ownerId: userId,
 		});
 
-		throw redirect(303, `/app/projects/${new_id}`);
+		throw redirect(303, `/app/projects/${newId}`);
 	},
 };

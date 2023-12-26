@@ -1,9 +1,12 @@
 import { db } from "$db";
 import { lines, projects } from "$db/schema";
-import { asc, count, eq } from "drizzle-orm";
+import { asc, eq } from "drizzle-orm";
+import type { RequestEvent } from "./$types";
+import { getUser } from "$lib/utils";
 
-export async function load() {
-	const fetched_projects = await db.select().from(projects);
+export async function load(event: RequestEvent) {
+	const userId = getUser(event);
+	const fetched_projects = await db.select().from(projects).where(eq(projects.ownerId, userId));
 	const line_infos = await Promise.all(
 		fetched_projects.map((project) =>
 			db

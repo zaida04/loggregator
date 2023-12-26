@@ -6,9 +6,11 @@ import { getProject } from "$lib/projects";
 import { type Actions, error, redirect } from "@sveltejs/kit";
 import { eq } from "drizzle-orm";
 import type { RequestEvent } from "./$types";
+import { getUser } from "$lib/utils";
 
 export async function load(event: RequestEvent) {
-	const project = await getProject(event.params.projectSlug!);
+	const userId = getUser(event);
+	const project = await getProject(userId, event.params.projectSlug!);
 	if (!project)
 		throw error(404, {
 			message: "Not found",

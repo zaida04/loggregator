@@ -1,3 +1,4 @@
+import type { RequestEvent } from "@sveltejs/kit";
 import { type ClassValue, clsx } from "clsx";
 import { cubicOut } from "svelte/easing";
 import type { TransitionConfig } from "svelte/transition";
@@ -70,4 +71,9 @@ export function formatLineDate(date: Date) {
 		minute: "2-digit",
 		hour12: true,
 	}).format(date);
+}
+
+// biome-ignore lint/complexity/noBannedTypes: <explanation>
+export function getUser(event: RequestEvent<{}, string>) {
+	return event.locals.session.userId;
 }
