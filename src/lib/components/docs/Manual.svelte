@@ -20,11 +20,12 @@
 </pre>
 
 <Button
-    on:click={() => {
+    size="xs"
+    on:click={() =>
         navigator.clipboard
             .writeText(`curl -X POST "https://loggregator.co/api/logger" \\
     -H "Content-Type: application/json" \\
     -H "Authorization: Bearer ${$token}" \\
-    -d '{"content": "This is a valid log line"}'`);
-    }}>Copy</Button
->
+    -d '{"content": "This is a valid log line"}'`)}
+    >Copy
+</Button>
