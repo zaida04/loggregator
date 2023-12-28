@@ -85,7 +85,9 @@
       <NavbarItem>
         <div class="flex flex-row gap-4">
           <ModeSwitcher />
-          <Button>Log In</Button>
+          <a href="/app">
+            <Button>Log In</Button>
+          </a>
         </div>
       </NavbarItem>
       <Separator />
