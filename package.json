@@ -35,11 +35,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@clerk/themes": "^1.7.9",
     "@lucia-auth/adapter-postgresql": "^2.0.2",
     "@lucia-auth/oauth": "^3.5.0",
     "bits-ui": "^0.11.8",
-    "clerk-sveltekit": "^0.3.0",
     "clsx": "^2.0.0",
     "cmdk-sv": "^0.0.5",
     "drizzle-orm": "^0.29.1",
