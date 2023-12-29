@@ -1,8 +1,8 @@
 import { db } from "$db";
 import { lines, projects } from "$db/schema";
+import { getUser } from "$lib/utils";
 import { asc, eq } from "drizzle-orm";
 import type { RequestEvent } from "./$types";
-import { getUser } from "$lib/utils";
 
 export async function load(event: RequestEvent) {
 	const userId = await getUser(event);

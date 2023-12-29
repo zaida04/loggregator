@@ -1,10 +1,10 @@
-import { lucia } from "lucia";
-import { sveltekit } from "lucia/middleware";
 import { dev } from "$app/environment";
-import { postgres as postgresAdapter } from "@lucia-auth/adapter-postgresql";
 import { client } from "$db";
 import { env } from "$env/dynamic/private";
+import { postgres as postgresAdapter } from "@lucia-auth/adapter-postgresql";
 import { github } from "@lucia-auth/oauth/providers";
+import { lucia } from "lucia";
+import { sveltekit } from "lucia/middleware";
 
 export const auth = lucia({
 	adapter: postgresAdapter(client, {

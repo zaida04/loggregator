@@ -3,10 +3,10 @@ import { type Line, type Project, lines, projects } from "$db/schema";
 import { accumulateDeployments } from "$lib/deployments";
 import { getLines } from "$lib/lines";
 import { getProject } from "$lib/projects";
+import { getUser } from "$lib/utils";
 import { type Actions, error, redirect } from "@sveltejs/kit";
 import { eq } from "drizzle-orm";
 import type { RequestEvent } from "./$types";
-import { getUser } from "$lib/utils";
 
 export async function load(event: RequestEvent) {
 	const userId = await getUser(event);

@@ -1,6 +1,6 @@
 import { db } from "$db";
 import { projects } from "$db/schema";
-import { eq, and } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 
 export async function getProject(userId: string, projectId: string) {
 	return db
