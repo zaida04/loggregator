@@ -1,7 +1,8 @@
 import { auth, githubAuth } from "$lib/server/auth";
 import { OAuthRequestError } from "@lucia-auth/oauth";
+import type { RequestEvent } from "./$types";
 
-export async function GET({ url, cookies, locals }) {
+export async function GET({ url, cookies, locals }: RequestEvent) {
 	const storedState = cookies.get("github_oauth_state");
 	const state = url.searchParams.get("state");
 	const code = url.searchParams.get("code");

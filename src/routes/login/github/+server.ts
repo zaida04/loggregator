@@ -1,7 +1,8 @@
 import { dev } from "$app/environment";
 import { githubAuth } from "$lib/server/auth";
+import type { RequestEvent } from "./$types";
 
-export async function GET({ cookies }) {
+export async function GET({ cookies }: RequestEvent) {
 	const [url, state] = await githubAuth.getAuthorizationUrl();
 	// store state
 	cookies.set("github_oauth_state", state, {
