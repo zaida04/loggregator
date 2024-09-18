@@ -4,7 +4,7 @@ export async function GET() {
 		.map(
 			(slug) => `
                 <url>
-                <loc>https://loggregator.co${slug}</loc>
+                <loc>https://loggregator.nico.engineer${slug}</loc>
                 </url>
             `,
 		)

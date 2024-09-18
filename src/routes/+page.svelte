@@ -27,7 +27,7 @@
     content="Loggregator is a simple, easy-to-use online log aggregation service that allows you to store, view, and search your logs."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://loggregator.co/" />
+  <meta property="og:url" content="https://loggregator.nico.engineer/" />
 </svelte:head>
 
 <Navbar />

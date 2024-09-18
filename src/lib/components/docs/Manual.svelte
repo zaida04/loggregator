@@ -12,7 +12,7 @@
 
 <pre class="overflow-x-auto mb-2">
     <code>
-{`curl -X POST "https://loggregator.co/api/logger" \\
+{`curl -X POST "https://loggregator.nico.engineer/api/logger" \\
     -H "Content-Type: application/json" \\
     -H "Authorization: Bearer ${$token}" \\
     -d '{"content": "This is a valid log line"}'`}
@@ -23,7 +23,7 @@
     size="xs"
     on:click={() =>
         navigator.clipboard
-            .writeText(`curl -X POST "https://loggregator.co/api/logger" \\
+            .writeText(`curl -X POST "https://loggregator.nico.engineer/api/logger" \\
     -H "Content-Type: application/json" \\
     -H "Authorization: Bearer ${$token}" \\
     -d '{"content": "This is a valid log line"}'`)}
